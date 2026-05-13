@@ -1,25 +1,25 @@
 Route10WildMons:
 	def_grass_wildmons 15 ; encounter rate
-	db 16, VOLTORB
-	db 16, SPEAROW
-	db 14, VOLTORB
+	db  1, LICKITUNG
+	db  1, STARMIE
+	db  1, MR_MIME
 IF DEF(_RED)
-	db 11, EKANS
+	db  1, JYNX
 	db 13, SPEAROW
-	db 15, EKANS
-	db 17, VOLTORB
-	db 17, SPEAROW
-	db 13, EKANS
-	db 17, EKANS
+	db  1, EKANS
+	db  1, GYARADOS
+	db  1, LAPRAS
+	db  1, EEVEE
+	db  1, VAPOREON
 ENDC
 IF DEF(_BLUE)
-	db 11, SANDSHREW
+	db  1, JYNX
 	db 13, SPEAROW
 	db 15, SANDSHREW
-	db 17, VOLTORB
-	db 17, SPEAROW
-	db 13, SANDSHREW
-	db 17, SANDSHREW
+	db  1, GYARADOS
+	db  1, LAPRAS
+	db  1, EEVEE
+	db  1, VAPOREON
 ENDC
 	end_grass_wildmons
 

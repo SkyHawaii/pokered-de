@@ -1,28 +1,28 @@
 Route12WildMons:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
-	db 24, ODDISH
-	db 25, PIDGEY
+	db  1, JOLTEON
+	db  1, FLAREON
+	db  1, PORYGON
+	db  1, OMANYTE
 	db 23, PIDGEY
-	db 24, VENONAT
-	db 22, ODDISH
-	db 26, VENONAT
-	db 26, ODDISH
-	db 27, PIDGEY
-	db 28, GLOOM
-	db 30, GLOOM
+	db  1, VENONAT
+	db  1, OMASTAR
+	db  1, KABUTO
+	db  1, KABUTOPS
+	db  1, DRAGONAIR
 ENDC
 IF DEF(_BLUE)
-	db 24, BELLSPROUT
-	db 25, PIDGEY
+	db  1, JOLTEON
+	db  1, FLAREON
+	db  1, PORYGON
+	db  1, OMANYTE
 	db 23, PIDGEY
-	db 24, VENONAT
-	db 22, BELLSPROUT
-	db 26, VENONAT
-	db 26, BELLSPROUT
-	db 27, PIDGEY
-	db 28, WEEPINBELL
-	db 30, WEEPINBELL
+	db  1, VENONAT
+	db  1, OMASTAR
+	db  1, KABUTO
+	db  1, KABUTOPS
+	db  1, DRAGONAIR
 ENDC
 	end_grass_wildmons
 

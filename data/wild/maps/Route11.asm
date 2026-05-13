@@ -1,26 +1,29 @@
 Route11WildMons:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
-	db 14, EKANS
-	db 15, SPEAROW
-	db 12, EKANS
-	db  9, DROWZEE
+	db  1, GYARADOS
+	db  1, LAPRAS
+	db  1, EEVEE
+	db  1, VAPOREON
 	db 13, SPEAROW
-	db 13, DROWZEE
-	db 15, EKANS
+	db  1, DROWZEE
+	db  1, JOLTEON
+	db  1, FLAREON
+	db  1, PORYGON
+	db  1, OMANYTE
 ENDC
 IF DEF(_BLUE)
-	db 14, SANDSHREW
-	db 15, SPEAROW
-	db 12, SANDSHREW
-	db  9, DROWZEE
+	db  1, GYARADOS
+	db  1, LAPRAS
+	db  1, EEVEE
+	db  1, VAPOREON
 	db 13, SPEAROW
-	db 13, DROWZEE
-	db 15, SANDSHREW
+	db  1, DROWZEE
+	db  1, JOLTEON
+	db  1, FLAREON
+	db  1, PORYGON
+	db  1, OMANYTE
 ENDC
-	db 17, SPEAROW
-	db 11, DROWZEE
-	db 15, DROWZEE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

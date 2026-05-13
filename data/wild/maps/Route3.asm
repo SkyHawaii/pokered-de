@@ -1,15 +1,15 @@
 Route3WildMons:
 	def_grass_wildmons 20 ; encounter rate
-	db  6, PIDGEY
-	db  5, SPEAROW
-	db  7, PIDGEY
-	db  6, SPEAROW
+	db  1, IVYSAUR
+	db  1, CHARMELEON
+	db  1, WARTORTLE
+	db  1, BEEDRILL
 	db  7, SPEAROW
 	db  8, PIDGEY
-	db  8, SPEAROW
-	db  3, JIGGLYPUFF
-	db  5, JIGGLYPUFF
-	db  7, JIGGLYPUFF
+	db  1, VENUSAUR
+	db  1, CHARIZARD
+	db  1, BLASTOISE
+	db  1, BUTTERFREE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
