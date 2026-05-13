@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db BUG, FLYING ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 160 ; base exp
 
 	INCBIN "gfx/pokemon/front/butterfree.pic", 0, 1 ; sprite dimensions
 	dw ButterfreePicFront, ButterfreePicBack
 
-	db CONFUSION, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db PSYCHIC_M, SLEEP_POWDER, STUN_SPORE, MEGA_DRAIN ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   WHIRLWIND,    TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \

@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db POISON, POISON ; type
-	db 60 ; catch rate
+	db 255 ; catch rate
 	db 173 ; base exp
 
 	INCBIN "gfx/pokemon/front/weezing.pic", 0, 1 ; sprite dimensions
 	dw WeezingPicFront, WeezingPicBack
 
-	db TACKLE, SMOG, SLUDGE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db SLUDGE, SMOG, EXPLOSION, HYPER_BEAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        HYPER_BEAM,   RAGE,         THUNDERBOLT,  THUNDER,      \

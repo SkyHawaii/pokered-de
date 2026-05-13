@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db POISON, POISON ; type
-	db 190 ; catch rate
+	db 255 ; catch rate
 	db 90 ; base exp
 
 	INCBIN "gfx/pokemon/front/grimer.pic", 0, 1 ; sprite dimensions
 	dw GrimerPicFront, GrimerPicBack
 
-	db POUND, DISABLE, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db SLUDGE, ACID, BODY_SLAM, THUNDER_WAVE ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    RAGE,         MEGA_DRAIN,   THUNDERBOLT,  \

@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db BUG, POISON ; type
-	db 75 ; catch rate
+	db 255 ; catch rate
 	db 138 ; base exp
 
 	INCBIN "gfx/pokemon/front/venomoth.pic", 0, 1 ; sprite dimensions
 	dw VenomothPicFront, VenomothPicBack
 
-	db TACKLE, DISABLE, POISONPOWDER, LEECH_LIFE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db SLEEP_POWDER, PSYCHIC_M, MEGA_DRAIN, HYPER_BEAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   WHIRLWIND,    TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \

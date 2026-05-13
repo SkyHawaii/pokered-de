@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db ROCK, GROUND ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 108 ; base exp
 
 	INCBIN "gfx/pokemon/front/onix.pic", 0, 1 ; sprite dimensions
 	dw OnixPicFront, OnixPicBack
 
-	db TACKLE, SCREECH, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db EARTHQUAKE, ROCK_SLIDE, SLAM, BIND ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         \

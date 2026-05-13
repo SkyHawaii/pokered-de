@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, NORMAL ; type
-	db 150 ; catch rate
+	db 255 ; catch rate
 	db 68 ; base exp
 
 	INCBIN "gfx/pokemon/front/clefairy.pic", 0, 1 ; sprite dimensions
 	dw ClefairyPicFront, ClefairyPicBack
 
-	db POUND, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_FAST ; growth rate
+	db METRONOME, BODY_SLAM, BLIZZARD, MINIMIZE ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \

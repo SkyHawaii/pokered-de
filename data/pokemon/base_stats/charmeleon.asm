@@ -4,13 +4,13 @@
 	;   hp  atk  def  spd  spc
 
 	db FIRE, FIRE ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 142 ; base exp
 
 	INCBIN "gfx/pokemon/front/charmeleon.pic", 0, 1 ; sprite dimensions
 	dw CharmeleonPicFront, CharmeleonPicBack
 
-	db SCRATCH, GROWL, EMBER, NO_MOVE ; level 1 learnset
+	db FLAMETHROWER, SLASH, FIRE_SPIN, SWORDS_DANCE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db FIRE, FLYING ; type
-	db 3 ; catch rate
+	db 255 ; catch rate
 	db 217 ; base exp
 
 	INCBIN "gfx/pokemon/front/moltres.pic", 0, 1 ; sprite dimensions
 	dw MoltresPicFront, MoltresPicBack
 
-	db PECK, FIRE_SPIN, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db FIRE_BLAST, FLAMETHROWER, AGILITY, HYPER_BEAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   WHIRLWIND,    TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \

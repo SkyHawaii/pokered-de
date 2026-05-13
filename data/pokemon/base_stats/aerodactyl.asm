@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db ROCK, FLYING ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 202 ; base exp
 
 	INCBIN "gfx/pokemon/front/aerodactyl.pic", 0, 1 ; sprite dimensions
 	dw AerodactylPicFront, AerodactylPicBack
 
-	db WING_ATTACK, AGILITY, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db ROCK_SLIDE, WING_ATTACK, AGILITY, HYPER_BEAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   WHIRLWIND,    TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \

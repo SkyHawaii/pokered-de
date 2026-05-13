@@ -4,13 +4,13 @@
 	;   hp  atk  def  spd  spc
 
 	db FIRE, FLYING ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 209 ; base exp
 
 	INCBIN "gfx/pokemon/front/charizard.pic", 0, 1 ; sprite dimensions
 	dw CharizardPicFront, CharizardPicBack
 
-	db SCRATCH, GROWL, EMBER, LEER ; level 1 learnset
+	db FIRE_BLAST, SLASH, WING_ATTACK, SWORDS_DANCE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

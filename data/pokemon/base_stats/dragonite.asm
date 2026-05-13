@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db DRAGON, FLYING ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 218 ; base exp
 
 	INCBIN "gfx/pokemon/front/dragonite.pic", 0, 1 ; sprite dimensions
 	dw DragonitePicFront, DragonitePicBack
 
-	db WRAP, LEER, THUNDER_WAVE, AGILITY ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db HYPER_BEAM, BLIZZARD, THUNDERBOLT, SURF ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    \

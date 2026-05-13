@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type
-	db 225 ; catch rate
+	db 255 ; catch rate
 	db 106 ; base exp
 
 	INCBIN "gfx/pokemon/front/staryu.pic", 0, 1 ; sprite dimensions
 	dw StaryuPicFront, StaryuPicBack
 
-	db TACKLE, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db SURF, ICE_BEAM, THUNDER_WAVE, RECOVER ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    \

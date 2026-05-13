@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db ELECTRIC, ELECTRIC ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 197 ; base exp
 
 	INCBIN "gfx/pokemon/front/jolteon.pic", 0, 1 ; sprite dimensions
 	dw JolteonPicFront, JolteonPicBack
 
-	db TACKLE, SAND_ATTACK, QUICK_ATTACK, THUNDERSHOCK ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db THUNDERBOLT, THUNDER, THUNDER_WAVE, BODY_SLAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   \

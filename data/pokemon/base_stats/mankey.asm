@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db FIGHTING, FIGHTING ; type
-	db 190 ; catch rate
+	db 255 ; catch rate
 	db 74 ; base exp
 
 	INCBIN "gfx/pokemon/front/mankey.pic", 0, 1 ; sprite dimensions
 	dw MankeyPicFront, MankeyPicBack
 
-	db SCRATCH, LEER, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db KARATE_CHOP, SEISMIC_TOSS, SUBMISSION, BODY_SLAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \

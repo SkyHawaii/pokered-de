@@ -4,13 +4,13 @@
 	;   hp  atk  def  spd  spc
 
 	db GRASS, POISON ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 191 ; base exp
 
 	INCBIN "gfx/pokemon/front/victreebel.pic", 0, 1 ; sprite dimensions
 	dw VictreebelPicFront, VictreebelPicBack
 
-	db SLEEP_POWDER, STUN_SPORE, ACID, RAZOR_LEAF ; level 1 learnset
+	db RAZOR_LEAF, SLEEP_POWDER, ACID, HYPER_BEAM ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

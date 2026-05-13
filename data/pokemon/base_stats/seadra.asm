@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type
-	db 75 ; catch rate
+	db 255 ; catch rate
 	db 155 ; base exp
 
 	INCBIN "gfx/pokemon/front/seadra.pic", 0, 1 ; sprite dimensions
 	dw SeadraPicFront, SeadraPicBack
 
-	db BUBBLE, SMOKESCREEN, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db SURF, BLIZZARD, ICE_BEAM, HYPER_BEAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    \

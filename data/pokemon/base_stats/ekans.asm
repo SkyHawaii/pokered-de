@@ -10,8 +10,8 @@
 	INCBIN "gfx/pokemon/front/ekans.pic", 0, 1 ; sprite dimensions
 	dw EkansPicFront, EkansPicBack
 
-	db WRAP, LEER, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db BITE, ACID, GLARE, BODY_SLAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         \

@@ -10,8 +10,8 @@
 	INCBIN "gfx/pokemon/front/weedle.pic", 0, 1 ; sprite dimensions
 	dw WeedlePicFront, WeedlePicBack
 
-	db POISON_STING, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db TWINEEDLE, POISON_STING, STRING_SHOT, FURY_ATTACK ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm

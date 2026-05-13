@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db WATER, PSYCHIC_TYPE ; type
-	db 190 ; catch rate
+	db 255 ; catch rate
 	db 99 ; base exp
 
 	INCBIN "gfx/pokemon/front/slowpoke.pic", 0, 1 ; sprite dimensions
 	dw SlowpokePicFront, SlowpokePicBack
 
-	db CONFUSION, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db AMNESIA, SURF, ICE_BEAM, PSYCHIC_M ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \

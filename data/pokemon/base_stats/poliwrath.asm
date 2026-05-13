@@ -4,13 +4,13 @@
 	;   hp  atk  def  spd  spc
 
 	db WATER, FIGHTING ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 185 ; base exp
 
 	INCBIN "gfx/pokemon/front/poliwrath.pic", 0, 1 ; sprite dimensions
 	dw PoliwrathPicFront, PoliwrathPicBack
 
-	db HYPNOSIS, WATER_GUN, DOUBLESLAP, BODY_SLAM ; level 1 learnset
+	db SURF, AMNESIA, SUBMISSION, HYPER_BEAM ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

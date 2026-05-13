@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db GROUND, GROUND ; type
-	db 190 ; catch rate
+	db 255 ; catch rate
 	db 87 ; base exp
 
 	INCBIN "gfx/pokemon/front/cubone.pic", 0, 1 ; sprite dimensions
 	dw CubonePicFront, CubonePicBack
 
-	db BONE_CLUB, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db BONE_CLUB, BONEMERANG, EARTHQUAKE, ROCK_SLIDE ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \

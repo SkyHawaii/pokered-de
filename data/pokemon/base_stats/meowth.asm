@@ -10,8 +10,8 @@
 	INCBIN "gfx/pokemon/front/meowth.pic", 0, 1 ; sprite dimensions
 	dw MeowthPicFront, MeowthPicBack
 
-	db SCRATCH, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db SLASH, PAY_DAY, BODY_SLAM, HYPER_BEAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \

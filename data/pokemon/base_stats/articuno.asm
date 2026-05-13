@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db ICE, FLYING ; type
-	db 3 ; catch rate
+	db 255 ; catch rate
 	db 215 ; base exp
 
 	INCBIN "gfx/pokemon/front/articuno.pic", 0, 1 ; sprite dimensions
 	dw ArticunoPicFront, ArticunoPicBack
 
-	db PECK, ICE_BEAM, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db BLIZZARD, ICE_BEAM, AGILITY, HYPER_BEAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   WHIRLWIND,    TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \

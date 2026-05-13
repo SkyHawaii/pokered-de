@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db GROUND, ROCK ; type
-	db 120 ; catch rate
+	db 255 ; catch rate
 	db 135 ; base exp
 
 	INCBIN "gfx/pokemon/front/rhyhorn.pic", 0, 1 ; sprite dimensions
 	dw RhyhornPicFront, RhyhornPicBack
 
-	db HORN_ATTACK, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db EARTHQUAKE, ROCK_SLIDE, HORN_DRILL, BODY_SLAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \

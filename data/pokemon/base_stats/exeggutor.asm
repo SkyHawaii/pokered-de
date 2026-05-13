@@ -4,14 +4,14 @@
 	;   hp  atk  def  spd  spc
 
 	db GRASS, PSYCHIC_TYPE ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 212 ; base exp
 
 	INCBIN "gfx/pokemon/front/exeggutor.pic", 0, 1 ; sprite dimensions
 	dw ExeggutorPicFront, ExeggutorPicBack
 
-	db BARRAGE, HYPNOSIS, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db SLEEP_POWDER, PSYCHIC_M, SOLARBEAM, HYPER_BEAM ; level 1 learnset
+	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   RAGE,         \

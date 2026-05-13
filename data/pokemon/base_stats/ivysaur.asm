@@ -4,13 +4,13 @@
 	;   hp  atk  def  spd  spc
 
 	db GRASS, POISON ; type
-	db 45 ; catch rate
+	db 255 ; catch rate
 	db 141 ; base exp
 
 	INCBIN "gfx/pokemon/front/ivysaur.pic", 0, 1 ; sprite dimensions
 	dw IvysaurPicFront, IvysaurPicBack
 
-	db TACKLE, GROWL, LEECH_SEED, NO_MOVE ; level 1 learnset
+	db SOLARBEAM, RAZOR_LEAF, SLEEP_POWDER, BODY_SLAM ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
