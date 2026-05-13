@@ -41,6 +41,7 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld a, c
 	and a ; is the mon's bit set?
 	jp z, Evolution_PartyMonLoop ; if not, go to the next mon
+.loadCurrentMonEvoData
 	ld a, [wEvoOldSpecies]
 	dec a
 	ld b, 0
@@ -229,11 +230,10 @@ Evolution_PartyMonLoop: ; loop over party mons
 	pop de
 	pop hl
 	ld a, [wLoadedMonSpecies]
-	ld [hl], a
+	ld [hl], a              ; Party-Species auf entwickelte Form aktualisieren
+	ld [wEvoOldSpecies], a  ; Evo-Daten für neue Species neu laden
 	push hl
-	ld l, e
-	ld h, d
-	jr .nextEvoEntry2
+	jp .loadCurrentMonEvoData
 
 .nextEvoEntry1
 	inc hl
