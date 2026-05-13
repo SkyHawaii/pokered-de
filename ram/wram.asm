@@ -268,7 +268,7 @@ wMenuWatchMovingOutOfBounds:: db
 
 wTradeCenterPointerTableIndex:: db
 
-	ds 1
+wNuzlockeEncounterAllowed:: db
 
 ; destination pointer for text output
 ; this variable is written to, but is never read from
@@ -2203,7 +2203,7 @@ wOpponentAfterWrongAnswer:: db
 ; mostly copied from map-specific map script pointer and written back later
 wCurMapScript:: db
 
-	ds 7
+	ds 1
 
 wPlayTimeHours:: db
 wPlayTimeMaxed:: db
@@ -2224,6 +2224,9 @@ wDayCareMonName:: ds NAME_LENGTH
 wDayCareMonOT::   ds NAME_LENGTH
 
 wDayCareMon:: box_struct wDayCareMon
+
+; Nuzlocke-Modus: Bitfeld – gesetzt wenn in diesem Gebiet die erste Begegnung stattgefunden hat
+wNuzlockeMapsCaught:: flag_array NUM_MAPS
 
 wMainDataEnd::
 

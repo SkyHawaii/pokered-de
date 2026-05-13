@@ -112,6 +112,12 @@ ItemUseBall:
 	dec a
 	jp nz, ThrowBallAtTrainerMon
 
+; Nuzlocke Erstbegegnung-Regel: Fang nur erlaubt wenn dies die erste Begegnung auf dieser Route ist.
+; Das Flag wurde beim Kampfstart in InitWildBattle gesetzt.
+	ld a, [wNuzlockeEncounterAllowed]
+	and a
+	jp z, NuzlockeAlreadyCaughtHere
+
 ; If this is for the old man battle, skip checking if the party & box are full.
 	ld a, [wBattleType]
 	dec a
@@ -2310,6 +2316,10 @@ BoxFullCannotThrowBall:
 	ld hl, BoxFullCannotThrowBallText
 	jr ItemUseFailed
 
+NuzlockeAlreadyCaughtHere:
+	ld hl, NuzlockeAlreadyCaughtText
+	jr ItemUseFailed
+
 SurfingAttemptFailed:
 	ld hl, NoSurfingHereText
 
@@ -2348,6 +2358,10 @@ NoSurfingHereText:
 
 BoxFullCannotThrowBallText:
 	text_far _BoxFullCannotThrowBallText
+	text_end
+
+NuzlockeAlreadyCaughtText:
+	text_far _NuzlockeAlreadyCaughtText
 	text_end
 
 ItemUseText00:

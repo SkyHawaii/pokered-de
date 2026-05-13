@@ -965,6 +965,13 @@ _PlayerMonFaintedText::
 	line "wurde besiegt!"
 	prompt
 
+_NuzlockeReleaseText::
+	text "NUZLOCKE: "
+	text_ram wNameBuffer
+	text_start
+	line "wird entlassen!"
+	prompt
+
 _UseNextMonText::
 	text "Nächstes #MON"
 	line "einsetzen?"

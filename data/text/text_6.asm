@@ -252,3 +252,10 @@ _BoxFullCannotThrowBallText::
 	cont "Item kann nicht"
 	cont "benutzt werden!"
 	prompt
+
+_NuzlockeAlreadyCaughtText::
+	text "NUZLOCKE-REGEL:"
+	line "In diesem Gebiet"
+	cont "wurde schon ein"
+	cont "#MON gefangen!"
+	prompt

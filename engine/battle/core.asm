@@ -1041,10 +1041,32 @@ RemoveFaintedPlayerMon:
 	ld a, [wBattleMonSpecies]
 	call PlayCry
 	ld hl, PlayerMonFaintedText
-	jp PrintText
+	call PrintText
+; Nuzlocke Permadeath erst aktiv nach EVENT_GOT_POKEBALLS_FROM_OAK
+	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
+	ret z
+; Nuzlocke Permadeath: Spitzname in wNameBuffer kopieren und Mon entlassen
+	ld a, [wPlayerMonNumber]
+	ld hl, wPartyMonNicks
+	call SkipFixedLengthTextEntries
+	ld de, wNameBuffer
+	ld bc, NAME_LENGTH
+	call CopyData
+	ld hl, NuzlockeReleaseText
+	call PrintText
+	ld a, [wPlayerMonNumber]
+	ld [wWhichPokemon], a
+	xor a
+	ld [wRemoveMonFromBox], a
+	call RemovePokemon
+	ret
 
 PlayerMonFaintedText:
 	text_far _PlayerMonFaintedText
+	text_end
+
+NuzlockeReleaseText:
+	text_far _NuzlockeReleaseText
 	text_end
 
 ; asks if you want to use next mon
@@ -6828,6 +6850,36 @@ InitBattleCommon:
 InitWildBattle:
 	ld a, $1
 	ld [wIsInBattle], a
+
+; Nuzlocke: Erstbegegnungs-Flag für diesen Wildkampf bestimmen.
+; Erst aktiv sobald Pokébälle von Eich erhalten wurden.
+; Ist die Route noch unbesucht: Flag setzen + Fang erlauben.
+; Ist die Route bereits besucht: Fang in diesem Kampf sperren.
+	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
+	jr z, .nuzlockeNotYetActive      ; Pokébälle noch nicht erhältlich → immer erlaubt
+	ld a, [wCurMap]
+	ld c, a
+	ld b, FLAG_TEST
+	ld hl, wNuzlockeMapsCaught
+	call FlagAction
+	ld a, c
+	and a
+	jr nz, .nuzlockeCatchBlocked     ; Route schon besucht → Fang sperren
+; Erste Begegnung auf dieser Route: Route als besucht markieren
+	ld a, [wCurMap]
+	ld c, a
+	ld b, FLAG_SET
+	ld hl, wNuzlockeMapsCaught
+	call FlagAction
+.nuzlockeNotYetActive
+	ld a, 1
+	ld [wNuzlockeEncounterAllowed], a
+	jr .nuzlockeDone
+.nuzlockeCatchBlocked
+	xor a
+	ld [wNuzlockeEncounterAllowed], a
+.nuzlockeDone
+
 	call LoadEnemyMonData
 	call DoBattleTransitionAndInitBattleVariables
 	ld a, [wCurOpponent]

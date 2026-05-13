@@ -11,17 +11,8 @@ AskName:
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndex], a
 	call GetMonName
-	ld hl, DoYouWantToNicknameText
-	call PrintText
-	hlcoord 13, 7
-	lb bc, 8, 14
-	ld a, TWO_OPTION_MENU
-	ld [wTextBoxID], a
-	call DisplayTextBoxID
+; Nuzlocke: Pflicht-Spitzname – Ja/Nein-Abfrage überspringen
 	pop hl
-	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .declinedNickname
 	ld a, [wUpdateSpritesEnabled]
 	push af
 	xor a
