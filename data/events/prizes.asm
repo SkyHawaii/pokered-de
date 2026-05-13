@@ -19,14 +19,14 @@ ENDC
 
 PrizeMenuMon1Cost:
 IF DEF(_RED)
-	bcd2 180
-	bcd2 500
+	bcd2 18
+	bcd2 50
 ENDC
 IF DEF(_BLUE)
-	bcd2 120
-	bcd2 750
+	bcd2 12
+	bcd2 75
 ENDC
-	bcd2 1200
+	bcd2 12
 	db "@"
 
 PrizeMenuMon2Entries:
@@ -43,14 +43,14 @@ ENDC
 
 PrizeMenuMon2Cost:
 IF DEF(_RED)
-	bcd2 2800
-	bcd2 5500
-	bcd2 9999
+	bcd2 28
+	bcd2 55
+	bcd2 99
 ENDC
 IF DEF(_BLUE)
-	bcd2 2500
-	bcd2 4600
-	bcd2 6500
+	bcd2 25
+	bcd2 46
+	bcd2 65
 ENDC
 	db "@"
 
@@ -61,7 +61,7 @@ PrizeMenuTMsEntries:
 	db "@"
 
 PrizeMenuTMsCost:
-	bcd2 3300
-	bcd2 5500
-	bcd2 7700
+	bcd2 33
+	bcd2 55
+	bcd2 77
 	db "@"

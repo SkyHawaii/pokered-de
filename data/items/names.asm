@@ -1,6 +1,6 @@
 ItemNames::
 	list_start ITEM_NAME_LENGTH - 1
-	li "MEISTERBALL"
+	li "SKYBALL"
 	li "HYPERBALL"
 	li "SUPERBALL"
 	li "POKéBALL"
