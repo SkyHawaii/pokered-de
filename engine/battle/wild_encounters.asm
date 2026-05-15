@@ -20,7 +20,7 @@ TryDoWildEncounter:
 	and a
 	jr z, .next
 	dec a
-	jr z, .lastRepelStep
+	jp z, .lastRepelStep
 	ld [wRepelRemainingSteps], a
 .next
 ; determine if wild pokemon can appear in the half-block we're standing in
@@ -40,10 +40,12 @@ TryDoWildEncounter:
 ; ...as long as it's not Viridian Forest or Safari Zone.
 	ld a, [wCurMap]
 	cp FIRST_INDOOR_MAP ; is this an indoor map?
-	jr c, .CantEncounter2
+	jp c, .CantEncounter2
 	ld a, [wCurMapTileset]
 	cp FOREST ; Viridian Forest/Safari Zone
-	jr z, .CantEncounter2
+	jp z, .CantEncounter2
+	cp LOBBY ; Aufzüge und Eingangshallen haben keine Wildpokemon
+	jp z, .CantEncounter2
 	ld a, [wGrassRate]
 .CanEncounter
 ; compare encounter chance with a random number to determine if there will be an encounter
@@ -78,6 +80,27 @@ TryDoWildEncounter:
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	ld [wEnemyMonSpecies2], a
+; Silph-Fernglas-Check: Geist-Pokemon im Pokemon-Turm ohne Silph-Fernglas nicht anzeigen
+	ld a, [wCurMap]
+	sub POKEMON_TOWER_3F
+	cp POKEMON_TOWER_7F - POKEMON_TOWER_3F + 1
+	jr nc, .noSilphCheck          ; nicht im Pokemon-Turm → überspringen
+	ld a, [wEnemyMonSpecies2]
+	cp GASTLY
+	jr z, .isGhostSpecies
+	cp HAUNTER
+	jr z, .isGhostSpecies
+	cp GENGAR
+	jr nz, .noSilphCheck          ; kein Geist-Pokemon → überspringen
+.isGhostSpecies
+	ld b, SILPH_SCOPE
+	call IsItemInBag
+	ld a, b
+	and a
+	jr nz, .noSilphCheck          ; Silph-Fernglas vorhanden → Kampf erlaubt
+	ld a, $1                      ; kein Fernglas → Begegnung verhindern
+	ret
+.noSilphCheck
 	ld a, [wRepelRemainingSteps]
 	and a
 	jr z, .willEncounter

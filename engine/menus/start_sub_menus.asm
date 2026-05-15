@@ -34,7 +34,7 @@ StartMenu_Pokemon::
 	ld [wTextBoxID], a
 	call DisplayTextBoxID ; display pokemon menu options
 	ld hl, wFieldMoves
-	lb bc, 2, 12 ; max menu item ID, top menu item Y
+	lb bc, 3, 10 ; max menu item ID, top menu item Y (IN BOX als vierter Eintrag)
 	ld e, 5
 .adjustMenuVariablesLoop
 	dec e
@@ -78,12 +78,18 @@ StartMenu_Pokemon::
 	jr z, .choseSwitch
 	dec b
 	cp b
+	jr z, .choseInBox
+	dec b
+	cp b
 	jp z, .choseStats
 	ld c, a
 	ld b, 0
 	ld hl, wFieldMoves
 	add hl, bc
 	jp .choseOutOfBattleMove
+.choseInBox
+	call SendToBoxFromPartyMenu
+	jp StartMenu_Pokemon
 .choseSwitch
 	ld a, [wPartyCount]
 	cp 2 ; is there more than one pokemon in the party?
@@ -345,15 +351,15 @@ StartMenu_Item::
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
 	ld hl, wTopMenuItemY
-	ld a, 11
+	ld a, 9
 	ld [hli], a ; top menu item Y
 	ld a, 14
 	ld [hli], a ; top menu item X
 	xor a
 	ld [hli], a ; current menu item ID
 	inc hl
-	inc a ; a = 1
-	ld [hli], a ; max menu item ID
+	ld a, 2
+	ld [hli], a ; max menu item ID (OK=0, COMPUTER=1, MÜLL=2)
 	ld a, PAD_A | PAD_B
 	ld [hli], a ; menu watched keys
 	xor a
@@ -380,8 +386,8 @@ StartMenu_Item::
 .notBicycle
 	ld a, [wCurrentMenuItem]
 	and a
-	jr nz, .tossItem
-; use item
+	jr nz, .notUse
+; use item (0 = OK)
 	ld [wPseudoItemID], a ; a must be 0 due to above conditional jump
 	ld a, [wCurItem]
 	cp HM01
@@ -421,6 +427,34 @@ StartMenu_Item::
 	pop af
 	ld [wUpdateSpritesEnabled], a
 	jp ItemMenuLoop
+.notUse
+	dec a
+	jr nz, .tossItem   ; a war 2 (MÜLL): dec=1 → nz → .tossItem
+; 1 = COMPUTER
+.sendToPC
+	call IsKeyItem
+	ld a, [wIsKeyItem]
+	and a
+	jr nz, .cannotSendToPC
+	call DisplayChooseQuantityMenu
+	inc a
+	jp z, ItemMenuLoop         ; Abbruch (Menge = 0)
+	ld hl, wNumBoxItems
+	call AddItemToInventory
+	jr nc, .pcFull
+	ld hl, wNumBagItems
+	call RemoveItemFromInventory
+	ld hl, ItemSentToPCText
+	call PrintText
+	jp ItemMenuLoop
+.cannotSendToPC
+	ld hl, CannotSendToPCText
+	call PrintText
+	jp ItemMenuLoop
+.pcFull
+	ld hl, PCItemsFullText
+	call PrintText
+	jp ItemMenuLoop
 .tossItem
 	call IsKeyItem
 	ld a, [wIsKeyItem]
@@ -437,6 +471,18 @@ StartMenu_Item::
 	call TossItem
 .tossZeroItems
 	jp ItemMenuLoop
+
+ItemSentToPCText:
+	text_far _ItemSentToPCText
+	text_end
+
+PCItemsFullText:
+	text_far _PCItemsFullText
+	text_end
+
+CannotSendToPCText:
+	text_far _CannotSendToPCText
+	text_end
 
 CannotUseItemsHereText:
 	text_far _CannotUseItemsHereText
@@ -806,3 +852,79 @@ SwitchPartyMon_InitVarOrSwapData:
 	pop de
 	pop hl
 	ret
+
+; Sendet das ausgewählte Party-Pokemon (wWhichPokemon) in die aktive PC-Box.
+; Wenn die Box voll ist, wird automatisch zur nächsten freien Box gewechselt.
+SendToBoxFromPartyMenu:
+	ld a, [wPartyCount]
+	dec a
+	jr nz, .partyLargeEnough
+	ld hl, InBoxCantDepositLastMonText
+	call PrintText
+	ret
+.partyLargeEnough
+	ld a, [wBoxCount]
+	cp MONS_PER_BOX
+	jr c, .doDeposit              ; Box nicht voll, direkt ablegen
+; Box voll → automatisch zur nächsten freien Box wechseln
+	callfar SwitchToNextAvailableBox
+	jr nc, .allBoxesFull
+.doDeposit
+; Name VOR dem Transfer sichern (Party noch intakt), Cursor zurücksetzen
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMonNicks
+	call GetPartyMonName           ; Name → wNameBuffer
+	ld de, wNameBuffer
+	call CopyToStringBuffer        ; wNameBuffer → wStringBuffer
+	xor a
+	ld [wPartyAndBillsPCSavedMenuItem], a
+; wCurPartySpecies aus wPartySpecies[wWhichPokemon] laden (wird von _MoveMon benötigt)
+	ld hl, wPartySpecies
+	ld a, [wWhichPokemon]
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [hl]
+	ld [wCurPartySpecies], a
+	ld a, PARTY_TO_BOX
+	ld [wMoveMonType], a
+	call MoveMon
+	xor a
+	ld [wRemoveMonFromBox], a
+	call RemovePokemon
+; Box-Nummer-String vorbereiten (wBoxNumString)
+	ld hl, wBoxNumString
+	ld a, [wCurrentBoxNum]
+	and BOX_NUM_MASK
+	cp 9
+	jr c, .singleDigit
+	sub 9
+	ld [hl], '1'
+	inc hl
+	add '0'
+	jr .nextChar
+.singleDigit
+	add '1'
+.nextChar
+	ld [hli], a
+	ld [hl], '@'
+	ld hl, InBoxSuccessText
+	call PrintText
+	callfar SaveCurrentBoxData
+	ret
+.allBoxesFull
+	ld hl, InBoxAllBoxesFullText
+	call PrintText
+	ret
+
+InBoxCantDepositLastMonText:
+	text_far _CantDepositLastMonText
+	text_end
+
+InBoxSuccessText:
+	text_far _MonWasStoredText
+	text_end
+
+InBoxAllBoxesFullText:
+	text_far _AllBoxesFullText
+	text_end
