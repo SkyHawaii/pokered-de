@@ -556,6 +556,34 @@ ZeroOutDuplicatesInList:
 	inc hl
 	jr .zeroDuplicatesLoop
 
+GetLocationName::
+; Fills wNameBuffer with the current map's outdoor location name (max 8 chars + "@").
+; Indoor maps (Gebäude, Dungeons) schreiben "@" → PlaceString zeigt nichts.
+; Called via farcall from draw_start_menu.asm (bank1).
+	ld a, [wCurMap]
+	cp FIRST_INDOOR_MAP
+	jr nc, .noName           ; indoor map → leer lassen
+	ld de, wTownMapCoords
+	call LoadTownMapEntry    ; hl = name string pointer (in this bank)
+	ld de, wNameBuffer
+	ld b, 8
+.copyLoop
+	ld a, [hli]
+	cp "@"
+	jr z, .terminate
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .copyLoop
+.terminate
+	ld a, "@"
+	ld [de], a
+	ret
+.noName
+	ld a, "@"
+	ld [wNameBuffer], a
+	ret
+
 LoadTownMapEntry:
 ; in: a = map number
 ; out: lower nybble of [de] = x, upper nybble of [de] = y, hl = address of name
