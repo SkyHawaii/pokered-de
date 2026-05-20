@@ -6,6 +6,9 @@ CalcLevelFromExperience::
 	ld d, $1 ; init level to 1
 .loop
 	inc d ; increment level
+	ld a, d
+	cp 101
+	jr z, .capAt100
 	call CalcExperience
 	push hl
 	ld hl, wLoadedMonExp + 2 ; current exp
@@ -25,6 +28,9 @@ CalcLevelFromExperience::
 	pop hl
 	jr nc, .loop ; if exp needed for level d is not greater than exp, try the next level
 	dec d ; since the exp was too high on the last loop iteration, go back to the previous value and return
+	ret
+.capAt100
+	dec d ; d = 100
 	ret
 
 ; calculates the amount of experience needed for level d
