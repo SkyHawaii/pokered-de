@@ -4,8 +4,8 @@ Route3WildMons:
 	db  1, CHARMELEON
 	db  1, WARTORTLE
 	db  1, BEEDRILL
-	db  7, SPEAROW
-	db  8, PIDGEY
+	db  1, SPEAROW
+	db  1, PIDGEY
 	db  1, VENUSAUR
 	db  1, CHARIZARD
 	db  1, BLASTOISE

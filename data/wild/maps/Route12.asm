@@ -5,7 +5,7 @@ IF DEF(_RED)
 	db  1, FLAREON
 	db  1, PORYGON
 	db  1, OMANYTE
-	db 23, PIDGEY
+	db  1, DRAGONAIR
 	db  1, VENONAT
 	db  1, OMASTAR
 	db  1, KABUTO
@@ -17,7 +17,7 @@ IF DEF(_BLUE)
 	db  1, FLAREON
 	db  1, PORYGON
 	db  1, OMANYTE
-	db 23, PIDGEY
+	db  1, DRAGONAIR
 	db  1, VENONAT
 	db  1, OMASTAR
 	db  1, KABUTO

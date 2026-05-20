@@ -5,7 +5,7 @@ Route9WildMons:
 	db  1, HITMONLEE
 IF DEF(_RED)
 	db  1, HITMONCHAN
-	db 13, SPEAROW
+	db  1, SPEAROW
 	db  1, EKANS
 	db  1, LICKITUNG
 	db  1, STARMIE
@@ -14,8 +14,8 @@ IF DEF(_RED)
 ENDC
 IF DEF(_BLUE)
 	db  1, HITMONCHAN
-	db 13, SPEAROW
-	db 15, SANDSHREW
+	db  1, SPEAROW
+	db  1, SANDSHREW
 	db  1, LICKITUNG
 	db  1, STARMIE
 	db  1, MR_MIME

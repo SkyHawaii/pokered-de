@@ -5,7 +5,7 @@ IF DEF(_RED)
 	db  1, RAPIDASH
 	db  1, FARFETCHD
 	db  1, CLOYSTER
-	db 20, PIDGEY
+	db  1, PIDGEY
 	db  1, MANKEY
 	db  1, GENGAR
 	db  1, EXEGGUTOR
@@ -16,8 +16,8 @@ IF DEF(_BLUE)
 	db  1, RAPIDASH
 	db  1, FARFETCHD
 	db  1, CLOYSTER
-	db 20, PIDGEY
-	db 20, MEOWTH
+	db  1, PIDGEY
+	db  1, MEOWTH
 	db  1, GENGAR
 	db  1, EXEGGUTOR
 	db  1, HITMONLEE

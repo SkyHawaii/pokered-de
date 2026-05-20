@@ -4,16 +4,16 @@ Route2WildMons:
 	db  1, MOLTRES
 	db  1, SNORLAX
 	db  1, AERODACTYL
-	db  5, PIDGEY
+	db  1, PIDGEY
 IF DEF(_RED)
-	db  3, WEEDLE
+	db  1, WEEDLE
 	db  1, IVYSAUR
 	db  1, CHARMELEON
 	db  1, WARTORTLE
 	db  1, BEEDRILL
 ENDC
 IF DEF(_BLUE)
-	db  3, CATERPIE
+	db  1, CATERPIE
 	db  1, IVYSAUR
 	db  1, CHARMELEON
 	db  1, WARTORTLE

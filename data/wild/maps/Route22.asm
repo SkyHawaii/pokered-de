@@ -1,6 +1,6 @@
 Route22WildMons:
 	def_grass_wildmons 25 ; encounter rate
-	db  3, RATTATA
+	db  1, JYNX
 IF DEF(_RED)
 	db 1, FLAREON
 	db 1, JOLTEON

@@ -5,7 +5,7 @@ IF DEF(_RED)
 	db  1, MACHAMP
 	db  1, VICTREEBEL
 	db  1, TENTACRUEL
-	db 22, PIDGEY
+	db  1, PIDGEY
 	db  1, MANKEY
 	db  1, GOLEM
 	db  1, RAPIDASH
@@ -16,8 +16,8 @@ IF DEF(_BLUE)
 	db  1, MACHAMP
 	db  1, VICTREEBEL
 	db  1, TENTACRUEL
-	db 22, PIDGEY
-	db 18, MEOWTH
+	db  1, PIDGEY
+	db  1, MEOWTH
 	db  1, GOLEM
 	db  1, RAPIDASH
 	db  1, FARFETCHD

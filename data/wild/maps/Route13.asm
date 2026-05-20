@@ -5,7 +5,7 @@ IF DEF(_RED)
 	db  1, KABUTO
 	db  1, KABUTOPS
 	db  1, DRAGONAIR
-	db 25, PIDGEY
+	db  1, PIDGEY
 	db  1, VENONAT
 	db  1, DRAGONITE
 	db  1, NIDOQUEEN
@@ -17,7 +17,7 @@ IF DEF(_BLUE)
 	db  1, KABUTO
 	db  1, KABUTOPS
 	db  1, DRAGONAIR
-	db 25, PIDGEY
+	db  1, PIDGEY
 	db  1, VENONAT
 	db  1, DRAGONITE
 	db  1, NIDOQUEEN

@@ -5,7 +5,7 @@ Route10WildMons:
 	db  1, MR_MIME
 IF DEF(_RED)
 	db  1, JYNX
-	db 13, SPEAROW
+	db  1, SPEAROW
 	db  1, EKANS
 	db  1, GYARADOS
 	db  1, LAPRAS
@@ -14,8 +14,8 @@ IF DEF(_RED)
 ENDC
 IF DEF(_BLUE)
 	db  1, JYNX
-	db 13, SPEAROW
-	db 15, SANDSHREW
+	db  1, SPEAROW
+	db  1, SANDSHREW
 	db  1, GYARADOS
 	db  1, LAPRAS
 	db  1, EEVEE

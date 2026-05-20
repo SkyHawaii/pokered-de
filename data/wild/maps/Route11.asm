@@ -5,7 +5,7 @@ IF DEF(_RED)
 	db  1, LAPRAS
 	db  1, EEVEE
 	db  1, VAPOREON
-	db 13, SPEAROW
+	db  1, SPEAROW
 	db  1, DROWZEE
 	db  1, JOLTEON
 	db  1, FLAREON
@@ -17,7 +17,7 @@ IF DEF(_BLUE)
 	db  1, LAPRAS
 	db  1, EEVEE
 	db  1, VAPOREON
-	db 13, SPEAROW
+	db  1, SPEAROW
 	db  1, DROWZEE
 	db  1, JOLTEON
 	db  1, FLAREON

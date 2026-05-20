@@ -4,7 +4,7 @@ IF DEF(_RED)
 	db 1, NIDORAN_M
 	db 1, RHYHORN
 	db 1, VENONAT
-	db 1, EXEGGCUTE
+	db 1, CHANSEY
 	db 1, NIDORINO
 	db 1, EXEGGCUTE
 	db 1, NIDORINA
@@ -15,12 +15,12 @@ IF DEF(_BLUE)
 	db 1, NIDORAN_F
 	db 1, RHYHORN
 	db 1, VENONAT
-	db 1, EXEGGCUTE
+	db 1, CHANSEY
 	db 1, NIDORINA
 	db 1, EXEGGCUTE
 	db 1, NIDORINO
 	db 1, PARASECT
-	db 23, PINSIR
+	db 1, PINSIR
 ENDC
 	db 1, CHANSEY
 	end_grass_wildmons

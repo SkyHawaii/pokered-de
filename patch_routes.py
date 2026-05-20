@@ -22,16 +22,16 @@ write('Route2', '''Route2WildMons:
 \tdb  1, MOLTRES
 \tdb  1, SNORLAX
 \tdb  1, AERODACTYL
-\tdb  5, PIDGEY
+\tdb  1, PIDGEY
 IF DEF(_RED)
-\tdb  3, WEEDLE
+\tdb  1, WEEDLE
 \tdb  1, IVYSAUR
 \tdb  1, CHARMELEON
 \tdb  1, WARTORTLE
 \tdb  1, BEEDRILL
 ENDC
 IF DEF(_BLUE)
-\tdb  3, CATERPIE
+\tdb  1, CATERPIE
 \tdb  1, IVYSAUR
 \tdb  1, CHARMELEON
 \tdb  1, WARTORTLE
@@ -54,8 +54,8 @@ write('Route3', '''Route3WildMons:
 \tdb  1, CHARMELEON
 \tdb  1, WARTORTLE
 \tdb  1, BEEDRILL
-\tdb  7, SPEAROW
-\tdb  8, PIDGEY
+\tdb  1, SPEAROW
+\tdb  1, PIDGEY
 \tdb  1, VENUSAUR
 \tdb  1, CHARIZARD
 \tdb  1, BLASTOISE
@@ -78,7 +78,7 @@ write('Route4', '''Route4WildMons:
 \tdb  1, BLASTOISE
 IF DEF(_RED)
 \tdb  1, BUTTERFREE
-\tdb  8, SPEAROW
+\tdb  1, SPEAROW
 \tdb  1, EKANS
 \tdb  1, PIDGEOT
 \tdb  1, NINETALES
@@ -87,8 +87,8 @@ IF DEF(_RED)
 ENDC
 IF DEF(_BLUE)
 \tdb  1, BUTTERFREE
-\tdb  8, SPEAROW
-\tdb 10, SANDSHREW
+\tdb  1, SPEAROW
+\tdb  1, SANDSHREW
 \tdb  1, PIDGEOT
 \tdb  1, NINETALES
 \tdb  1, ARCANINE
@@ -113,7 +113,7 @@ IF DEF(_RED)
 \tdb  1, ARCANINE
 \tdb  1, PERSIAN
 \tdb  1, MANKEY
-\tdb 15, ODDISH
+\tdb  1, ODDISH
 \tdb  1, PRIMEAPE
 \tdb  1, CLEFABLE
 \tdb  1, VILEPLUME
@@ -124,8 +124,8 @@ IF DEF(_BLUE)
 \tdb  1, NINETALES
 \tdb  1, ARCANINE
 \tdb  1, PERSIAN
-\tdb 10, MEOWTH
-\tdb 15, BELLSPROUT
+\tdb  1, MEOWTH
+\tdb  1, BELLSPROUT
 \tdb  1, PRIMEAPE
 \tdb  1, CLEFABLE
 \tdb  1, VILEPLUME
@@ -150,7 +150,7 @@ IF DEF(_RED)
 \tdb  1, VILEPLUME
 \tdb  1, POLIWRATH
 \tdb  1, MANKEY
-\tdb 15, ODDISH
+\tdb  1, ODDISH
 \tdb  1, ALAKAZAM
 \tdb  1, MACHAMP
 \tdb  1, VICTREEBEL
@@ -161,8 +161,8 @@ IF DEF(_BLUE)
 \tdb  1, CLEFABLE
 \tdb  1, VILEPLUME
 \tdb  1, POLIWRATH
-\tdb 10, MEOWTH
-\tdb 15, BELLSPROUT
+\tdb  1, MEOWTH
+\tdb  1, BELLSPROUT
 \tdb  1, ALAKAZAM
 \tdb  1, MACHAMP
 \tdb  1, VICTREEBEL
@@ -186,7 +186,7 @@ IF DEF(_RED)
 \tdb  1, MACHAMP
 \tdb  1, VICTREEBEL
 \tdb  1, TENTACRUEL
-\tdb 22, PIDGEY
+\tdb  1, PIDGEY
 \tdb  1, MANKEY
 \tdb  1, GOLEM
 \tdb  1, RAPIDASH
@@ -197,8 +197,8 @@ IF DEF(_BLUE)
 \tdb  1, MACHAMP
 \tdb  1, VICTREEBEL
 \tdb  1, TENTACRUEL
-\tdb 22, PIDGEY
-\tdb 18, MEOWTH
+\tdb  1, PIDGEY
+\tdb  1, MEOWTH
 \tdb  1, GOLEM
 \tdb  1, RAPIDASH
 \tdb  1, FARFETCH_D
@@ -222,7 +222,7 @@ IF DEF(_RED)
 \tdb  1, RAPIDASH
 \tdb  1, FARFETCH_D
 \tdb  1, CLOYSTER
-\tdb 20, PIDGEY
+\tdb  1, PIDGEY
 \tdb  1, MANKEY
 \tdb  1, GENGAR
 \tdb  1, EXEGGUTOR
@@ -233,8 +233,8 @@ IF DEF(_BLUE)
 \tdb  1, RAPIDASH
 \tdb  1, FARFETCH_D
 \tdb  1, CLOYSTER
-\tdb 20, PIDGEY
-\tdb 20, MEOWTH
+\tdb  1, PIDGEY
+\tdb  1, MEOWTH
 \tdb  1, GENGAR
 \tdb  1, EXEGGUTOR
 \tdb  1, HITMONLEE
@@ -258,7 +258,7 @@ write('Route9', '''Route9WildMons:
 \tdb  1, HITMONLEE
 IF DEF(_RED)
 \tdb  1, HITMONCHAN
-\tdb 13, SPEAROW
+\tdb  1, SPEAROW
 \tdb  1, EKANS
 \tdb  1, LICKITUNG
 \tdb  1, STARMIE
@@ -267,8 +267,8 @@ IF DEF(_RED)
 ENDC
 IF DEF(_BLUE)
 \tdb  1, HITMONCHAN
-\tdb 13, SPEAROW
-\tdb 15, SANDSHREW
+\tdb  1, SPEAROW
+\tdb  1, SANDSHREW
 \tdb  1, LICKITUNG
 \tdb  1, STARMIE
 \tdb  1, MR_MIME
@@ -292,7 +292,7 @@ write('Route10', '''Route10WildMons:
 \tdb  1, MR_MIME
 IF DEF(_RED)
 \tdb  1, JYNX
-\tdb 13, SPEAROW
+\tdb  1, SPEAROW
 \tdb  1, EKANS
 \tdb  1, GYARADOS
 \tdb  1, LAPRAS
@@ -301,8 +301,8 @@ IF DEF(_RED)
 ENDC
 IF DEF(_BLUE)
 \tdb  1, JYNX
-\tdb 13, SPEAROW
-\tdb 15, SANDSHREW
+\tdb  1, SPEAROW
+\tdb  1, SANDSHREW
 \tdb  1, GYARADOS
 \tdb  1, LAPRAS
 \tdb  1, EEVEE
@@ -326,7 +326,7 @@ IF DEF(_RED)
 \tdb  1, LAPRAS
 \tdb  1, EEVEE
 \tdb  1, VAPOREON
-\tdb 13, SPEAROW
+\tdb  1, SPEAROW
 \tdb  1, DROWZEE
 \tdb  1, JOLTEON
 \tdb  1, FLAREON
@@ -338,7 +338,7 @@ IF DEF(_BLUE)
 \tdb  1, LAPRAS
 \tdb  1, EEVEE
 \tdb  1, VAPOREON
-\tdb 13, SPEAROW
+\tdb  1, SPEAROW
 \tdb  1, DROWZEE
 \tdb  1, JOLTEON
 \tdb  1, FLAREON
@@ -363,7 +363,7 @@ IF DEF(_RED)
 \tdb  1, FLAREON
 \tdb  1, PORYGON
 \tdb  1, OMANYTE
-\tdb 23, PIDGEY
+\tdb  1, PIDGEY
 \tdb  1, VENONAT
 \tdb  1, OMASTAR
 \tdb  1, KABUTO
@@ -375,7 +375,7 @@ IF DEF(_BLUE)
 \tdb  1, FLAREON
 \tdb  1, PORYGON
 \tdb  1, OMANYTE
-\tdb 23, PIDGEY
+\tdb  1, PIDGEY
 \tdb  1, VENONAT
 \tdb  1, OMASTAR
 \tdb  1, KABUTO
@@ -400,7 +400,7 @@ IF DEF(_RED)
 \tdb  1, KABUTO
 \tdb  1, KABUTOPS
 \tdb  1, DRAGONAIR
-\tdb 25, PIDGEY
+\tdb  1, PIDGEY
 \tdb  1, VENONAT
 \tdb  1, DRAGONITE
 \tdb  1, NIDOQUEEN
@@ -412,7 +412,7 @@ IF DEF(_BLUE)
 \tdb  1, KABUTO
 \tdb  1, KABUTOPS
 \tdb  1, DRAGONAIR
-\tdb 25, PIDGEY
+\tdb  1, PIDGEY
 \tdb  1, VENONAT
 \tdb  1, DRAGONITE
 \tdb  1, NIDOQUEEN
@@ -437,20 +437,20 @@ IF DEF(_RED)
 \tdb  1, NIDOQUEEN
 \tdb  1, NIDOKING
 \tdb  1, ELECTABUZZ
-\tdb 22, ODDISH
+\tdb  1, ODDISH
 \tdb  1, VENONAT
-\tdb 26, ODDISH
-\tdb 30, GLOOM
+\tdb  1, ODDISH
+\tdb  1, GLOOM
 ENDC
 IF DEF(_BLUE)
 \tdb  1, DRAGONITE
 \tdb  1, NIDOQUEEN
 \tdb  1, NIDOKING
 \tdb  1, ELECTABUZZ
-\tdb 22, BELLSPROUT
+\tdb  1, BELLSPROUT
 \tdb  1, VENONAT
-\tdb 26, BELLSPROUT
-\tdb 30, WEEPINBELL
+\tdb  1, BELLSPROUT
+\tdb  1, WEEPINBELL
 ENDC
 \tdb  1, PIDGEOTTO
 \tdb  1, PIDGEOTTO

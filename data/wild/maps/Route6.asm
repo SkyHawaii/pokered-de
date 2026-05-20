@@ -6,7 +6,7 @@ IF DEF(_RED)
 	db  1, VILEPLUME
 	db  1, POLIWRATH
 	db  1, MANKEY
-	db 15, ODDISH
+	db  1, ODDISH
 	db  1, ALAKAZAM
 	db  1, MACHAMP
 	db  1, VICTREEBEL
@@ -17,8 +17,8 @@ IF DEF(_BLUE)
 	db  1, CLEFABLE
 	db  1, VILEPLUME
 	db  1, POLIWRATH
-	db 10, MEOWTH
-	db 15, BELLSPROUT
+	db  1, MEOWTH
+	db  1, BELLSPROUT
 	db  1, ALAKAZAM
 	db  1, MACHAMP
 	db  1, VICTREEBEL

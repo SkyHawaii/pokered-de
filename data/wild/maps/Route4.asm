@@ -5,7 +5,7 @@ Route4WildMons:
 	db  1, BLASTOISE
 IF DEF(_RED)
 	db  1, BUTTERFREE
-	db  8, SPEAROW
+	db  1, SPEAROW
 	db  1, EKANS
 	db  1, PIDGEOT
 	db  1, NINETALES
@@ -14,8 +14,8 @@ IF DEF(_RED)
 ENDC
 IF DEF(_BLUE)
 	db  1, BUTTERFREE
-	db  8, SPEAROW
-	db 10, SANDSHREW
+	db  1, SPEAROW
+	db  1, SANDSHREW
 	db  1, PIDGEOT
 	db  1, NINETALES
 	db  1, ARCANINE
