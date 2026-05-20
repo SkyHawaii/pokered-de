@@ -243,7 +243,7 @@ SaveMainData:
 	ld [rRAMG], a
 	ret
 
-SaveCurrentBoxData:
+SaveCurrentBoxData::
 	ld a, RAMG_SRAM_ENABLE
 	ld [rRAMG], a
 	ld a, BMODE_ADVANCED
@@ -354,6 +354,58 @@ BoxSRAMPointerTable:
 	dw sBox4 ; sBox10
 	dw sBox5 ; sBox11
 	dw sBox6 ; sBox12
+
+; Wechselt zur nächsten Box mit freiem Platz (ohne Benutzer-Interaktion).
+; Gibt Carry gesetzt zurück wenn erfolgreich, Carry gelöscht wenn alle Boxen voll.
+SwitchToNextAvailableBox::
+	call GetMonCountsForAllBoxes    ; wBoxMonCounts mit aktuellen Zählwerten füllen
+; Startpunkt: aktuelle Box (c)
+	ld a, [wCurrentBoxNum]
+	and BOX_NUM_MASK
+	ld c, a
+	ld b, NUM_BOXES - 1              ; maximal NUM_BOXES-1 andere Boxen prüfen
+.searchLoop
+	inc c
+	ld a, c
+	cp NUM_BOXES
+	jr c, .inRange
+	xor a
+	ld c, a                          ; Wrap: zurück zu Box 0
+.inRange
+	ld hl, wBoxMonCounts
+	ld d, 0
+	ld e, c
+	add hl, de
+	ld a, [hl]
+	cp MONS_PER_BOX
+	jr c, .foundBox                  ; Diese Box hat noch Platz
+	dec b
+	jr nz, .searchLoop
+.allFull
+	and a                            ; Carry löschen = Misserfolg
+	ret
+.foundBox
+; c = Ziel-Box-Nummer (0-11)
+; Erste Box-Änderung? → SRAM initialisieren
+	ld hl, wCurrentBoxNum
+	bit BIT_HAS_CHANGED_BOXES, [hl]
+	call z, EmptyAllSRAMBoxes
+; Aktuelle WRAM-Box in nummerierten SRAM-Slot sichern
+	call GetBoxSRAMLocation
+	ld e, l
+	ld d, h
+	ld hl, wBoxDataStart
+	call CopyBoxToOrFromSRAM         ; WRAM → SRAM, löscht WRAM-Zähler
+; Box-Nummer aktualisieren
+	ld a, c
+	set BIT_HAS_CHANGED_BOXES, a
+	ld [wCurrentBoxNum], a
+; Neue Box aus SRAM in WRAM laden
+	call GetBoxSRAMLocation
+	ld de, wBoxDataStart
+	call CopyBoxToOrFromSRAM         ; SRAM → WRAM
+	scf                              ; Carry setzen = Erfolg
+	ret
 
 ChangeBox::
 	ld hl, WhenYouChangeBoxText

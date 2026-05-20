@@ -259,3 +259,25 @@ _NuzlockeAlreadyCaughtText::
 	cont "wurde schon ein"
 	cont "#MON gefangen!"
 	prompt
+
+_ItemSentToPCText::
+	text_ram wStringBuffer
+	text " wurde"
+	line "im PC abgelegt."
+	prompt
+
+_PCItemsFullText::
+	text "Die PC-Ablage"
+	line "ist voll!"
+	prompt
+
+_CannotSendToPCText::
+	text "Dieses Item kann"
+	line "nicht im PC"
+	cont "abgelegt werden!"
+	prompt
+
+_AllBoxesFullText::
+	text "Alle Boxen"
+	line "sind voll!"
+	prompt

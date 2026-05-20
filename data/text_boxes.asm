@@ -25,7 +25,7 @@ ENDM
 TextBoxTextAndCoordTable:
 	; text box ID, upper-left X, upper-left Y, lower-right X, lower-right Y, text pointer, text X, text Y
 	text_box_text JP_MOCHIMONO_MENU_TEMPLATE,         0,  0, 14, 17, UnusedText,               3,  0
-	text_box_text USE_TOSS_MENU_TEMPLATE,            13, 10, 19, 14, UseTossText,             15, 11
+	text_box_text USE_TOSS_MENU_TEMPLATE,            13,  8, 19, 16, UseTossText,             15,  9
 	text_box_text JP_SAVE_MESSAGE_MENU_TEMPLATE,      0,  0,  7,  5, UnusedText,               2,  2
 	text_box_text JP_SPEED_OPTIONS_MENU_TEMPLATE,     0,  6,  5, 10, UnusedText,               2,  7
 	text_box_text BATTLE_MENU_TEMPLATE,               6, 12, 19, 17, BattleMenuText,           8, 14
@@ -46,6 +46,7 @@ BuySellQuitText:
 
 UseTossText:
 	db   "OK"
+	next "PC"
 	next "MÜLL@"
 
 MoneyText:
