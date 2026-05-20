@@ -13,7 +13,18 @@ LoadWildData::
 	ld a, [hli]
 	ld [wGrassRate], a
 	and a
-	jr z, .NoGrassData ; if no grass data, skip to surfing data
+	jr nz, .hasGrassData
+; MissingNo.-Fix: wGrassMons leeren wenn keine Grasdaten vorhanden,
+; damit veraltete Daten (z.B. vom Alten-Mann-Tutorial) keine falschen Begegnungen auslösen.
+	ld hl, wGrassMons
+	ld b, WILDDATA_LENGTH - 1
+	xor a
+.clearGrassLoop
+	ld [hli], a
+	dec b
+	jr nz, .clearGrassLoop
+	jr .NoGrassData
+.hasGrassData
 	push hl
 	ld de, wGrassMons ; otherwise, load grass data
 	ld bc, WILDDATA_LENGTH - 1

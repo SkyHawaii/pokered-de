@@ -11,28 +11,8 @@ AskName:
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndex], a
 	call GetMonName
-; Nuzlocke: Pflicht-Spitzname – Ja/Nein-Abfrage überspringen
+; Nuzlocke: Kein Spitzname – Artnamen direkt übernehmen
 	pop hl
-	ld a, [wUpdateSpritesEnabled]
-	push af
-	xor a
-	ld [wUpdateSpritesEnabled], a
-	push hl
-	ld a, NAME_MON_SCREEN
-	ld [wNamingScreenType], a
-	call DisplayNamingScreen
-	ld a, [wIsInBattle]
-	and a
-	jr nz, .inBattle
-	call ReloadMapSpriteTilePatterns
-.inBattle
-	call LoadScreenTilesFromBuffer1
-	pop hl
-	pop af
-	ld [wUpdateSpritesEnabled], a
-	ld a, [wStringBuffer]
-	cp '@'
-	ret nz
 .declinedNickname
 	ld d, h
 	ld e, l
