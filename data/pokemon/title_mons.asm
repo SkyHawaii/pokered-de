@@ -2,37 +2,37 @@ TitleMons:
 ; mons on the title screen are randomly chosen from here
 IF DEF(_RED)
 	db MEWTWO
+	db STARTER1
 	db MEWTWO
+	db STARTER1
 	db MEWTWO
+	db STARTER1
 	db MEWTWO
+	db STARTER1
 	db MEWTWO
+	db STARTER1
 	db MEWTWO
+	db STARTER1
 	db MEWTWO
+	db STARTER1
 	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
+	db STARTER1
 ENDC
 IF DEF(_BLUE)
 	db MEWTWO
+	db STARTER2
 	db MEWTWO
+	db STARTER2
 	db MEWTWO
+	db STARTER2
 	db MEWTWO
+	db STARTER2
 	db MEWTWO
+	db STARTER2
 	db MEWTWO
+	db STARTER2
 	db MEWTWO
+	db STARTER2
 	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
-	db MEWTWO
+	db STARTER2
 ENDC
