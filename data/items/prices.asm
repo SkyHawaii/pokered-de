@@ -48,7 +48,7 @@ ItemPrices::
 	bcd3 95    ; X_ACCURACY
 	bcd3 21    ; LEAF_STONE
 	bcd3 10    ; CARD_KEY
-	bcd3 10    ; NUGGET
+	bcd3 99999 ; NUGGET
 	bcd3 98    ; ITEM_32
 	bcd3 10    ; POKE_DOLL
 	bcd3 60    ; FULL_HEAL
