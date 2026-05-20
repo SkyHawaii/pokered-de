@@ -4666,7 +4666,14 @@ CriticalHitTest:
 	ld b, $ff                    ; cap at 255/256
 	jr .noFocusEnergyUsed
 .focusEnergyUsed
-	srl b
+	sla b
+	jr nc, .fe2
+	ld b, $ff
+	jr .noFocusEnergyUsed
+.fe2
+	sla b
+	jr nc, .noFocusEnergyUsed
+	ld b, $ff
 .noFocusEnergyUsed
 	ld hl, HighCriticalMoves     ; table of high critical hit moves
 .Loop
@@ -6861,7 +6868,7 @@ InitWildBattle:
 	ld c, a
 	ld b, FLAG_TEST
 	ld hl, wNuzlockeMapsCaught
-	call FlagAction
+	predef FlagActionPredef
 	ld a, c
 	and a
 	jr nz, .nuzlockeCatchBlocked     ; Route schon besucht → Fang sperren
@@ -6870,7 +6877,7 @@ InitWildBattle:
 	ld c, a
 	ld b, FLAG_SET
 	ld hl, wNuzlockeMapsCaught
-	call FlagAction
+	predef FlagActionPredef
 .nuzlockeNotYetActive
 	ld a, 1
 	ld [wNuzlockeEncounterAllowed], a

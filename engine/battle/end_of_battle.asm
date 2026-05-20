@@ -54,6 +54,7 @@ EndOfBattle:
 	ld [wBattleType], a
 	ld [wMoveMissed], a
 	ld [wCurOpponent], a
+	ld [wEnemyMonSpecies2], a
 	ld [wForcePlayerToChooseMon], a
 	ld [wNumRunAttempts], a
 	ld [wEscapedFromBattle], a

@@ -313,11 +313,18 @@ DivideExpDataByNumMonsGainingExp:
 	xor a
 	ldh [hDividend], a
 	ld a, [hl]
-	ldh [hDividend + 1], a
+	ld b, a                ; b = EXP-Wert (Dividend)
 	ld a, [wTempByteValue]
-	ldh [hDivisor], a
+	ldh [hDivisor], a      ; Divisor speichern
+	dec a                  ; a = Divisor - 1
+	add b                  ; a = Dividend + (Divisor - 1)  →  Ceiling-Division
+	ldh [hDividend + 1], a
+	jr nc, .noCeiling
+	ld a, 1
+	ldh [hDividend], a     ; Überlauf: High-Byte auf 1 setzen
+.noCeiling
 	ld b, $2
-	call Divide ; divide value by number of mons gaining exp
+	call Divide
 	ldh a, [hQuotient + 3]
 	ld [hli], a
 	dec c
