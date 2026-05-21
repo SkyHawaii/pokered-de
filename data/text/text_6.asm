@@ -281,3 +281,9 @@ _AllBoxesFullText::
 	text "Alle Boxen"
 	line "sind voll!"
 	prompt
+
+_ExpDistributedText::
+	text "Die EP wurden"
+	line "gleichmäßig"
+	cont "verteilt!"
+	prompt

@@ -2,7 +2,25 @@ GainExperience:
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
 	ret z ; return if link battle
+; Alle Party-Mons bekommen EP — egal ob am Kampf teilgenommen.
+; Maske = (1 << wPartyCount) - 1, max $3F.
+	ld a, [wPartyCount]
+	and a
+	ret z
+	ld b, a
+	ld a, 1
+.buildGainFlagMask
+	sla a
+	dec b
+	jr nz, .buildGainFlagMask
+	dec a
+	ld [wPartyGainExpFlags], a
+	xor a
+	ld [wExpRemainder], a
 	call DivideExpDataByNumMonsGainingExp
+; Sammeltext einmalig vor der Loop (statt pro-Mon GainedText)
+	ld hl, ExpDistributedText
+	call PrintText
 	ld hl, wPartyMon1
 	xor a
 	ld [wWhichPokemon], a
@@ -58,6 +76,17 @@ GainExperience:
 	ldh [hMultiplicand], a
 	ldh [hMultiplicand + 1], a
 	ld a, [wEnemyMonBaseExp]
+	ld b, a
+; Modulo-Bonus: die ersten wExpRemainder Mons bekommen BaseExp+1,
+; sodass die Aufteilung exakt aufgeht (50/3 → 17,17,16 statt 17,17,17).
+	ld a, [wExpRemainder]
+	ld c, a
+	ld a, [wWhichPokemon]
+	cp c
+	jr nc, .noExpBonus
+	inc b
+.noExpBonus
+	ld a, b
 	ldh [hMultiplicand + 2], a
 	ld a, [wEnemyMonLevel]
 	ldh [hMultiplier], a
@@ -143,11 +172,7 @@ GainExperience:
 	dec hl
 .next2
 	push hl
-	ld a, [wWhichPokemon]
-	ld hl, wPartyMonNicks
-	call GetPartyMonName
-	ld hl, GainedText
-	call PrintText
+; Per-Mon GainedText entfernt — Sammeltext wird einmalig vor der Loop gedruckt.
 	xor a ; PLAYER_PARTY_DATA
 	ld [wMonDataLocation], a
 	call LoadMonData
@@ -290,7 +315,10 @@ GainExperience:
 	pop bc
 	predef_jump FlagActionPredef ; set the fought current enemy flag for the mon that is currently out
 
-; divide enemy base stats, catch rate, and base exp by the number of mons gaining exp
+; divide enemy base stats and base exp by the number of mons gaining exp.
+; BaseStats nutzen Ceiling-Division (Stat-EP-Granularität ist 8-bit, kaum sichtbar).
+; BaseExp nutzt Floor-Division + Remainder in wExpRemainder — die ersten R Mons
+; bekommen BaseExp+1, sodass Σ EP = OriginalBaseExp × Level / 7 (Modulo-Aufteilung).
 DivideExpDataByNumMonsGainingExp:
 	ld a, [wPartyGainExpFlags]
 	ld b, a
@@ -308,20 +336,20 @@ DivideExpDataByNumMonsGainingExp:
 	ret c ; return if only one mon is gaining exp
 	ld [wTempByteValue], a ; store number of mons gaining exp
 	ld hl, wEnemyMonBaseStats
-	ld c, wEnemyMonBaseExp + 1 - wEnemyMonBaseStats
+	ld c, NUM_STATS        ; 5 BaseStats — letzten Wert (BaseExp) separat behandeln
 .divideLoop
 	xor a
 	ldh [hDividend], a
 	ld a, [hl]
-	ld b, a                ; b = EXP-Wert (Dividend)
+	ld b, a                ; b = Wert (Dividend)
 	ld a, [wTempByteValue]
-	ldh [hDivisor], a      ; Divisor speichern
+	ldh [hDivisor], a
 	dec a                  ; a = Divisor - 1
-	add b                  ; a = Dividend + (Divisor - 1)  →  Ceiling-Division
+	add b                  ; Ceiling: Dividend + (Divisor - 1)
 	ldh [hDividend + 1], a
 	jr nc, .noCeiling
 	ld a, 1
-	ldh [hDividend], a     ; Überlauf: High-Byte auf 1 setzen
+	ldh [hDividend], a
 .noCeiling
 	ld b, $2
 	call Divide
@@ -329,6 +357,19 @@ DivideExpDataByNumMonsGainingExp:
 	ld [hli], a
 	dec c
 	jr nz, .divideLoop
+; BaseExp: Floor-Division + Remainder
+	xor a
+	ldh [hDividend], a
+	ld a, [hl]             ; a = OriginalBaseExp
+	ldh [hDividend + 1], a
+	ld a, [wTempByteValue]
+	ldh [hDivisor], a
+	ld b, $2
+	call Divide
+	ldh a, [hQuotient + 3]
+	ld [hl], a             ; wEnemyMonBaseExp = Floor(Original / NumMons)
+	ldh a, [hDivisor]      ; nach Divide steht der Rest in hDivisor
+	ld [wExpRemainder], a
 	ret
 
 ; multiplies exp by 1.5
@@ -376,4 +417,8 @@ ExpPointsText:
 GrewLevelText:
 	text_far _GrewLevelText
 	sound_level_up
+	text_end
+
+ExpDistributedText:
+	text_far _ExpDistributedText
 	text_end

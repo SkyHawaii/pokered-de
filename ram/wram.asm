@@ -785,6 +785,7 @@ NEXTU
 wOptionsTextSpeedCursorX:: db
 wOptionsBattleAnimCursorX:: db
 wOptionsBattleStyleCursorX:: db
+wOptionsNuzlockeCursorX:: db
 wOptionsCancelCursorX:: db
 
 NEXTU
@@ -1085,9 +1086,11 @@ NEXTU
 wExpAmountGained:: dw
 
 wGainBoostedExp:: db
-ENDU
 
-	ds 1
+; Rest aus OriginalBaseExp / NumGainingMons.
+; Die ersten wExpRemainder Mons bekommen BaseExp+1 (Modulo-Verteilung).
+wExpRemainder:: db
+ENDU
 
 wGymCityName:: ds GYM_CITY_LENGTH
 
