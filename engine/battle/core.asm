@@ -1042,8 +1042,9 @@ RemoveFaintedPlayerMon:
 	call PlayCry
 	ld hl, PlayerMonFaintedText
 	call PrintText
-; Nuzlocke Permadeath erst aktiv nach EVENT_GOT_POKEBALLS_FROM_OAK
-	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
+; Nuzlocke Permadeath nur aktiv, wenn Nuzlocke-Option im Options-Menü an ist
+	ld a, [wOptions]
+	bit BIT_NUZLOCKE_MODE, a
 	ret z
 ; Nuzlocke Permadeath: Spitzname in wNameBuffer kopieren und Mon entlassen
 	ld a, [wPlayerMonNumber]
@@ -1168,7 +1169,11 @@ HandlePlayerBlackOut:
 	call PrintText
 	ld a, [wCurMap]
 	cp OAKS_LAB
-	ret z            ; starter battle in oak's lab: don't black out
+	jr nz, .notRival1Battle
+; Starter-Kampf in OAK's Lab verloren: kein Standard-Blackout,
+; aber Event setzen, damit Mama beim nächsten Hausbesuch tröstet.
+	SetEvent EVENT_RIVAL1_MOMHEAL_DONE
+	ret
 .notRival1Battle
 	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
@@ -6859,11 +6864,12 @@ InitWildBattle:
 	ld [wIsInBattle], a
 
 ; Nuzlocke: Erstbegegnungs-Flag für diesen Wildkampf bestimmen.
-; Erst aktiv sobald Pokébälle von Eich erhalten wurden.
+; Nur aktiv wenn BIT_NUZLOCKE_MODE im Options-Menü gesetzt ist.
 ; Ist die Route noch unbesucht: Flag setzen + Fang erlauben.
 ; Ist die Route bereits besucht: Fang in diesem Kampf sperren.
-	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
-	jr z, .nuzlockeNotYetActive      ; Pokébälle noch nicht erhältlich → immer erlaubt
+	ld a, [wOptions]
+	bit BIT_NUZLOCKE_MODE, a
+	jr z, .nuzlockeNotYetActive      ; Nuzlocke-Modus aus → immer erlaubt
 	ld a, [wCurMap]
 	ld c, a
 	ld b, FLAG_TEST
