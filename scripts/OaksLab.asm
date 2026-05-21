@@ -896,7 +896,7 @@ OaksLabMonChoiceMenu:
 	call YesNoChoice ; yes/no menu
 	ld a, [wCurrentMenuItem]
 	and a
-	jr nz, OaksLabMonChoiceEnd
+	jp nz, OaksLabMonChoiceEnd
 	ld a, [wCurPartySpecies]
 	ld [wPlayerStarter], a
 	ld [wNamedObjectIndex], a
@@ -931,6 +931,21 @@ OaksLabMonChoiceMenu:
 	call AddPartyMon
 	ld hl, wStatusFlags4
 	set BIT_GOT_STARTER, [hl]
+; Sofort-Setup: Pokedex und 10 Pokebälle ohne Paket-Quest.
+	SetEvent EVENT_GOT_POKEDEX
+	SetEvent EVENT_OAK_GOT_PARCEL
+	SetEvent EVENT_GOT_OAKS_PARCEL
+	SetEvent EVENT_GOT_POKEBALLS_FROM_OAK
+	SetEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS
+	lb bc, POKE_BALL, 10
+	call GiveItem
+; Pokedex-Sprites im Lab unsichtbar machen (sie liegen sonst weiterhin im Regal).
+	ld a, HS_POKEDEX_1
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_POKEDEX_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
 	ld a, PAD_SELECT | PAD_START | PAD_CTRL_PAD
 	ld [wJoyIgnore], a
 	ld a, SCRIPT_OAKSLAB_CHOSE_STARTER_SCRIPT
