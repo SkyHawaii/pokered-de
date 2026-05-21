@@ -40,12 +40,10 @@ PrepareOakSpeech:
 	jp CopyData
 
 OakSpeech:
+; Stark gekürzte Variante: nur Namens-Eingabe + Setup, ohne Animationen
+; (kein Oak-Bild, keine Nidorino-Animation, keine Shrink-Sequenz).
 	ld a, SFX_STOP_ALL_MUSIC
 	call PlaySound
-	ld a, BANK(Music_Routes2)
-	ld c, a
-	ld a, MUSIC_ROUTES2
-	call PlayMusic
 	call ClearScreen
 	call LoadTextBoxTilePatterns
 	call PrepareOakSpeech
@@ -63,107 +61,39 @@ OakSpeech:
 	ldh [hTileAnimations], a
 	ld a, [wStatusFlags6]
 	bit BIT_DEBUG_MODE, a
-	jp nz, .skipSpeech
-	ld de, ProfOakPic
-	lb bc, BANK(ProfOakPic), $00
-	call IntroDisplayPicCenteredOrUpperRight
-	call FadeInIntroPic
-	ld hl, OakSpeechText1
-	call PrintText
-	call GBFadeOutToWhite
-	call ClearScreen
-	ld a, NIDORINO
-	ld [wCurSpecies], a
-	ld [wCurPartySpecies], a
-	call GetMonHeader
-	hlcoord 6, 4
-	call LoadFlippedFrontSpriteByMonIndex
-	call MovePicLeft
-	ld hl, OakSpeechText2
-	call PrintText
-	call GBFadeOutToWhite
-	call ClearScreen
-	ld de, RedPicFront
-	lb bc, BANK(RedPicFront), $00
-	call IntroDisplayPicCenteredOrUpperRight
-	call MovePicLeft
-	ld hl, IntroducePlayerText
-	call PrintText
-	call ChoosePlayerName
-	call GBFadeOutToWhite
-	call ClearScreen
-	ld de, Rival1Pic
-	lb bc, BANK(Rival1Pic), $00
-	call IntroDisplayPicCenteredOrUpperRight
-	call FadeInIntroPic
-	ld hl, IntroduceRivalText
-	call PrintText
-	call ChooseRivalName
-.skipSpeech
-	call GBFadeOutToWhite
-	call ClearScreen
-	ld de, RedPicFront
-	lb bc, BANK(RedPicFront), $00
-	call IntroDisplayPicCenteredOrUpperRight
-	call GBFadeInFromWhite
-	ld a, [wStatusFlags3]
-	and a ; ???
-	jr nz, .next
-	ld hl, OakSpeechText3
-	call PrintText
-.next
-	ldh a, [hLoadedROMBank]
-	push af
-	ld a, SFX_SHRINK
-	call PlaySound
-	pop af
-; bug: switching ROM Bank should not happen outside of Home Bank
-; This code does nothing, as PlaySound does all necessary Bank switch
-; It looks like a leftover from an early development stage
-	ldh [hLoadedROMBank], a
-	ld [rROMB], a
-	ld c, 4
-	call DelayFrames
-	ld de, RedSprite
-	ld hl, vSprites
-	lb bc, BANK(RedSprite), $0C
-	call CopyVideoData
-	ld de, ShrinkPic1
-	lb bc, BANK(ShrinkPic1), $00
-	call IntroDisplayPicCenteredOrUpperRight
-	ld c, 4
-	call DelayFrames
-	ld de, ShrinkPic2
-	lb bc, BANK(ShrinkPic2), $00
-	call IntroDisplayPicCenteredOrUpperRight
-	call ResetPlayerSpriteData
-	ldh a, [hLoadedROMBank]
-	push af
-	ld a, BANK(Music_PalletTown)
-	ld [wAudioROMBank], a
-	ld [wAudioSavedROMBank], a
-	ld a, 10
-	ld [wAudioFadeOutControl], a
-	ld a, SFX_STOP_ALL_MUSIC
-	ld [wNewSoundID], a
-	call PlaySound
-	pop af
-; bug: switching ROM Bank should not happen outside of Home Bank
-	ldh [hLoadedROMBank], a
-	ld [rROMB], a
-	ld c, 20
-	call DelayFrames
-	hlcoord 6, 5
-	ld b, 7
-	ld c, 7
-	call ClearScreenArea
-	call LoadTextBoxTilePatterns
-	ld a, 1
-	ld [wUpdateSpritesEnabled], a
-	ld c, 50
-	call DelayFrames
-	call GBFadeOutToWhite
+	jr nz, .skipNameInput
+; Spieler-Name-Eingabe (Custom oder Default aus Liste)
+	call OakSpeechAskPlayerName
+; Rival-Name automatisch auf Standard setzen (BLAU/ROT je nach Edition)
+	ld hl, DefaultRivalName
+	ld de, wRivalName
+	ld bc, NAME_LENGTH
+	call CopyData
+.skipNameInput
 	jp ClearScreen
+
+DefaultRivalName:
+IF DEF(_RED)
+	db "BLAU@"
+ENDC
+IF DEF(_BLUE)
+	db "ROT@"
+ENDC
+
+; Simple Name-Eingabe ohne Pic-Slide-Animationen.
+; Wenn nur '@' eingegeben wird, wird die Eingabe wiederholt.
+OakSpeechAskPlayerName:
+	call ClearScreen
+	call LoadTextBoxTilePatterns
+.askLoop
+	ld hl, wPlayerName
+	xor a ; NAME_PLAYER_SCREEN
+	ld [wNamingScreenType], a
+	call DisplayNamingScreen
+	ld a, [wStringBuffer]
+	cp '@'
+	jr z, .askLoop
+	ret
 
 OakSpeechText1:
 	text_far _OakSpeechText1
