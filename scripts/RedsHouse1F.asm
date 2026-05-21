@@ -10,10 +10,17 @@ RedsHouse1FMomText:
 	text_asm
 	ld a, [wStatusFlags4]
 	bit BIT_GOT_STARTER, a
-	jr nz, .heal
+	jr nz, .checkRival1Loss
 	ld hl, .WakeUpText
 	call PrintText
 	jr .done
+.checkRival1Loss
+	CheckEvent EVENT_RIVAL1_MOMHEAL_DONE
+	jr z, .heal
+; Trösttext einmalig nach erstem Rival-Verlust
+	ResetEvent EVENT_RIVAL1_MOMHEAL_DONE
+	ld hl, .ComfortText
+	call PrintText
 .heal
 	call RedsHouse1FMomHealScript
 .done
@@ -21,6 +28,10 @@ RedsHouse1FMomText:
 
 .WakeUpText:
 	text_far _RedsHouse1FMomWakeUpText
+	text_end
+
+.ComfortText:
+	text_far _RedsHouse1FMomComfortText
 	text_end
 
 RedsHouse1FMomHealScript:

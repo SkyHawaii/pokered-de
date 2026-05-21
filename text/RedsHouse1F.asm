@@ -10,6 +10,15 @@ _RedsHouse1FMomWakeUpText::
 	cont "Dir gefragt."
 	done
 
+_RedsHouse1FMomComfortText::
+	text "MUTTER: Oh nein,"
+	line "<PLAYER>! Du hast"
+	cont "verloren? Keine"
+	cont "Sorge, ich helfe"
+	cont "Dir wieder auf"
+	cont "die Beine."
+	prompt
+
 _RedsHouse1FMomYouShouldRestText::
 	text "MUTTER: <PLAYER>!"
 	line "Du solltest eine"
