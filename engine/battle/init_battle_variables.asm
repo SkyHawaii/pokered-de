@@ -32,6 +32,10 @@ InitBattleVariables:
 	jr c, .notSafariBattle
 	cp SAFARI_ZONE_CENTER_REST_HOUSE
 	jr nc, .notSafariBattle
+; Map-ID-Range allein reicht nicht: zusätzlich EVENT_IN_SAFARI_ZONE prüfen,
+; sonst greift BATTLE_TYPE_SAFARI auch in anderen Maps mit ID-Überlappung.
+	CheckEvent EVENT_IN_SAFARI_ZONE
+	jr z, .notSafariBattle
 	ld a, BATTLE_TYPE_SAFARI
 	ld [wBattleType], a
 .notSafariBattle
