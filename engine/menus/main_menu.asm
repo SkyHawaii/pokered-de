@@ -459,6 +459,11 @@ DisplayOptionMenu:
 	ld b, 2
 	ld c, 18
 	call TextBoxBorder
+; Kompakte Boxen haben nur 2 Innenzeilen — der <NEXT>-Char muss daher
+; nur 1 Zeile springen (statt der default 2), damit Header + Werte in
+; die Box passen. Gleiche Mechanik wie save.asm/learn_move.asm.
+	ld hl, hUILayoutFlags
+	set BIT_SINGLE_SPACED_LINES, [hl]
 	hlcoord 1, 1
 	ld de, TextSpeedOptionText
 	call PlaceString
@@ -471,6 +476,8 @@ DisplayOptionMenu:
 	hlcoord 1, 13
 	ld de, NuzlockeOptionText
 	call PlaceString
+	ld hl, hUILayoutFlags
+	res BIT_SINGLE_SPACED_LINES, [hl]
 	hlcoord 2, 17
 	ld de, OptionMenuCancelText
 	call PlaceString
