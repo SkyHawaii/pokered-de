@@ -108,14 +108,14 @@ _ViridianCityFisherTM42NoRoomText::
 	done
 
 _ViridianCityOldManHadMyCoffeeNowText::
-	text "Ahh, ich habe"
-	line "endlich meinen"
-	cont "Kaffee bekommen!"
+	text "Ich liebe guten"
+	line "Kaffee!"
 
-	para "Natürlich kannst"
-	line "Du passieren!"
+	para "Soll ich Dir"
+	line "erklären, wie man"
+	cont "#MON fängt?"
 
-	para "Hast Du es"
+	para "Oder hast Du es"
 	line "etwa eilig?"
 	done
 

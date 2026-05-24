@@ -5,11 +5,12 @@ _BluesHouseDaisyRivalAtLabText::
 	done
 
 _BluesHouseDaisyOfferMapText::
-	text "Opa hat Dich um"
-	line "einen Botengang"
-	cont "gebeten? Hier,"
-	cont "das wird Dir"
-	cont "weiterhelfen!"
+	text "Ich habe hier"
+	line "eine KARTE."
+
+	para "Die kannst Du"
+	line "sicher gut"
+	cont "gebrauchen!"
 	prompt
 
 _GotMapText::

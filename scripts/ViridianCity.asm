@@ -280,7 +280,10 @@ ViridianCityOldManText:
 	call YesNoChoice
 	ld a, [wCurrentMenuItem]
 	and a
-	jr z, .refused
+; Frage beginnt jetzt mit "Soll ich erklaeren?" -> JA (item 0) muss zum
+; Fang-Tutorial fuehren, NEIN/eilig (item 1) zum Abschied. Polaritaet
+; gegenueber Vanilla ("Hast Du es eilig?") daher gedreht.
+	jr nz, .refused
 	ld hl, .KnowHowToCatchPokemonText
 	call PrintText
 	ld a, SCRIPT_VIRIDIANCITY_OLD_MAN_START_CATCH_TRAINING
