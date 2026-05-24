@@ -1,5 +1,12 @@
 ViridianMart_Script:
 	call ViridianMartCheckParcelDeliveredScript
+; Paket bereits vorab erledigt (Custom-Quick-Start): die Default-Cutscene
+; greift sonst auf TEXT 4 zurück, das in TextPointers2 nicht existiert.
+	CheckEvent EVENT_OAK_GOT_PARCEL
+	jr z, .runScripts
+	ld a, SCRIPT_VIRIDIANMART_NOOP
+	ld [wViridianMartCurScript], a
+.runScripts
 	call EnableAutoTextBoxDrawing
 	ld hl, ViridianMart_ScriptPointers
 	ld a, [wViridianMartCurScript]

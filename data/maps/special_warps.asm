@@ -45,7 +45,9 @@ MACRO special_warp_spec
 ENDM
 
 NewGameWarp:
-	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+; Quick-Start: direkt im Oak's Lab am Türtile spawnen statt in Reds Haus.
+; Tür-Warps liegen auf (4,11)/(5,11) in OaksLab_Object — siehe data/maps/objects/OaksLab.asm.
+	special_warp_spec OAKS_LAB, 5, 11, DOJO
 TradeCenterPlayerWarp:
 	special_warp_spec TRADE_CENTER,  3, 4, CLUB
 TradeCenterFriendWarp:

@@ -62,15 +62,27 @@ OakSpeech:
 	ld a, [wStatusFlags6]
 	bit BIT_DEBUG_MODE, a
 	jr nz, .skipNameInput
-; Spieler-Name-Eingabe (Custom oder Default aus Liste)
+; Spieler-Name-Eingabe (Custom, leer → Wiederholung)
 	call OakSpeechAskPlayerName
-; Rival-Name automatisch auf Standard setzen (BLAU/ROT je nach Edition)
-	ld hl, DefaultRivalName
-	ld de, wRivalName
-	ld bc, NAME_LENGTH
-	call CopyData
+; Rival-Name-Eingabe (Custom, leer → DefaultRivalName als Fallback)
+	call OakSpeechAskRivalName
 .skipNameInput
+; Lab-State so initialisieren, dass der Spieler beim Map-Einstieg direkt
+; den "Spieler betritt Labor"-Pfad nimmt (Auto-Walk 8 Tiles UP zur Oak-Szene).
+	call PrepareOaksLabQuickStart
 	jp ClearScreen
+
+; Quick-Start in Oak's Lab vorbereiten: Oak1 sichtbar machen, Skript-Slot
+; auf PLAYER_ENTERS_LAB stellen und das Event setzen, das normalerweise von
+; PalletTowns Interception-Skript gesetzt würde.
+PrepareOaksLabQuickStart:
+	SetEvent EVENT_OAK_APPEARED_IN_PALLET
+	ld a, HS_OAKS_LAB_OAK_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ld a, SCRIPT_OAKSLAB_PLAYER_ENTERS_LAB
+	ld [wOaksLabCurScript], a
+	ret
 
 DefaultRivalName:
 IF DEF(_RED)
@@ -94,6 +106,23 @@ OakSpeechAskPlayerName:
 	cp '@'
 	jr z, .askLoop
 	ret
+
+; Rival-Namens-Eingabe. Leere Eingabe → DefaultRivalName als Fallback.
+OakSpeechAskRivalName:
+	call ClearScreen
+	call LoadTextBoxTilePatterns
+	ld hl, wRivalName
+	ld a, NAME_RIVAL_SCREEN
+	ld [wNamingScreenType], a
+	call DisplayNamingScreen
+	ld a, [wStringBuffer]
+	cp '@'
+	ret nz
+; Leere Eingabe → Standard-Namen (BLAU/ROT je nach Edition) übernehmen
+	ld hl, DefaultRivalName
+	ld de, wRivalName
+	ld bc, NAME_LENGTH
+	jp CopyData
 
 OakSpeechText1:
 	text_far _OakSpeechText1

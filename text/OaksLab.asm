@@ -218,35 +218,13 @@ _OaksLabRivalFedUpWithWaitingText::
 
 _OaksLabOakChooseMonText::
 	text "PROF. EICH:"
-	line "<RIVAL>? Laß mich"
-	cont "nachdenken..."
-
-	para "Ach richtig! Ihr"
-	line "solltet ja zu mir"
-	cont "kommen! Wartet"
-	cont "einen Moment!"
-
-	para "Hier, <PLAYER>!"
-
-	para "Dort liegen drei"
-	line "#MON!"
-
-	para "Haha!"
-
-	para "Sie befinden"
-	line "sich in den"
+	line "Dort liegen drei"
+	cont "#MON in den"
 	cont "#BÄLLEN."
 
-	para "In meiner Jugend"
-	line "war ich ein"
-	cont "engagierter"
-	cont "#MON-TRAINER!"
-
-	para "Jetzt, da ich alt"
-	line "bin, habe ich nur"
-	cont "3 #MON übrig."
-	cont "Aber ich gebe Dir"
-	cont "eines ab! Wähle!"
+	para "Ich gebe Dir"
+	line "eines davon!"
+	cont "Wähle!"
 	done
 
 _OaksLabRivalWhatAboutMeText::

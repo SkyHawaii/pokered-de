@@ -15,6 +15,7 @@ OaksLab_ScriptPointers:
 	dw_const OaksLabOakEntersLabScript,              SCRIPT_OAKSLAB_OAK_ENTERS_LAB
 	dw_const OaksLabHideShowOaksScript,              SCRIPT_OAKSLAB_HIDE_SHOW_OAKS
 	dw_const OaksLabPlayerEntersLabScript,           SCRIPT_OAKSLAB_PLAYER_ENTERS_LAB
+	EXPORT SCRIPT_OAKSLAB_PLAYER_ENTERS_LAB ; für Quick-Start aus OakSpeech
 	dw_const OaksLabFollowedOakScript,               SCRIPT_OAKSLAB_FOLLOWED_OAK
 	dw_const OaksLabOakChooseMonSpeechScript,        SCRIPT_OAKSLAB_OAK_CHOOSE_MON_SPEECH
 	dw_const OaksLabPlayerDontGoAwayScript,          SCRIPT_OAKSLAB_PLAYER_DONT_GO_AWAY_SCRIPT
@@ -128,19 +129,9 @@ OaksLabFollowedOakScript:
 OaksLabOakChooseMonSpeechScript:
 	ld a, PAD_SELECT | PAD_START | PAD_CTRL_PAD
 	ld [wJoyIgnore], a
-	ld a, TEXT_OAKSLAB_RIVAL_FED_UP_WITH_WAITING
-	ldh [hTextID], a
-	call DisplayTextID
-	call Delay3
+; Nur Oaks "Wähle ein Pokémon"-Text — die Rival-Zwischenfragen
+; (FED_UP_WITH_WAITING, WHAT_ABOUT_ME) und Oaks BE_PATIENT-Antwort raus.
 	ld a, TEXT_OAKSLAB_OAK_CHOOSE_MON
-	ldh [hTextID], a
-	call DisplayTextID
-	call Delay3
-	ld a, TEXT_OAKSLAB_RIVAL_WHAT_ABOUT_ME
-	ldh [hTextID], a
-	call DisplayTextID
-	call Delay3
-	ld a, TEXT_OAKSLAB_OAK_BE_PATIENT
 	ldh [hTextID], a
 	call DisplayTextID
 	SetEvent EVENT_OAK_ASKED_TO_CHOOSE_MON
@@ -946,6 +937,25 @@ OaksLabMonChoiceMenu:
 	ld a, HS_POKEDEX_2
 	ld [wMissableObjectIndex], a
 	predef HideObject
+; Folgewirkungen, die normalerweise OaksLabOakGivesPokedexScript +
+; OaksLabRivalLeavesWithPokedexScript erledigt hätten — die laufen in der
+; Quick-Start-Variante nicht, daher hier nachholen:
+; Viridian City: schlafenden Alten verbergen, stehenden Alten zeigen.
+	ld a, HS_LYING_OLD_MAN
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_OLD_MAN
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+; Route 22: ersten Rivalen-Kampf freischalten + Rivale-Sprite einblenden.
+	SetEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE
+	SetEvent EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	ld a, HS_ROUTE_22_RIVAL_1
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+; Pallet Town: Daisy-Skript aktivieren (sie läuft sonst nicht herum).
+	ld a, SCRIPT_PALLETTOWN_DAISY
+	ld [wPalletTownCurScript], a
 	ld a, PAD_SELECT | PAD_START | PAD_CTRL_PAD
 	ld [wJoyIgnore], a
 	ld a, SCRIPT_OAKSLAB_CHOSE_STARTER_SCRIPT
