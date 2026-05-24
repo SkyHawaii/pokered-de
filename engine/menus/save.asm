@@ -358,6 +358,12 @@ BoxSRAMPointerTable:
 ; Wechselt zur nächsten Box mit freiem Platz (ohne Benutzer-Interaktion).
 ; Gibt Carry gesetzt zurück wenn erfolgreich, Carry gelöscht wenn alle Boxen voll.
 SwitchToNextAvailableBox::
+; SRAM einmalig initialisieren bevor wir Box-Counts lesen — sonst liefert
+; GetMonCountsForAllBoxes uninitialisierten SRAM-Müll und alle Boxen sehen
+; voll aus, obwohl sie leer sind.
+	ld hl, wCurrentBoxNum
+	bit BIT_HAS_CHANGED_BOXES, [hl]
+	call z, EmptyAllSRAMBoxes
 	call GetMonCountsForAllBoxes    ; wBoxMonCounts mit aktuellen Zählwerten füllen
 ; Startpunkt: aktuelle Box (c)
 	ld a, [wCurrentBoxNum]
@@ -386,10 +392,6 @@ SwitchToNextAvailableBox::
 	ret
 .foundBox
 ; c = Ziel-Box-Nummer (0-11)
-; Erste Box-Änderung? → SRAM initialisieren
-	ld hl, wCurrentBoxNum
-	bit BIT_HAS_CHANGED_BOXES, [hl]
-	call z, EmptyAllSRAMBoxes
 ; Aktuelle WRAM-Box in nummerierten SRAM-Slot sichern
 	call GetBoxSRAMLocation
 	ld e, l
