@@ -173,6 +173,11 @@ GainExperience:
 .next2
 	push hl
 ; Per-Mon GainedText entfernt — Sammeltext wird einmalig vor der Loop gedruckt.
+; Pokémon-Namen trotzdem in wNameBuffer laden, damit GrewLevelText nicht
+; den letzten Move-Namen ("Bodyslam erreicht Level X") anzeigt.
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMonNicks
+	call GetPartyMonName
 	xor a ; PLAYER_PARTY_DATA
 	ld [wMonDataLocation], a
 	call LoadMonData
@@ -357,10 +362,16 @@ DivideExpDataByNumMonsGainingExp:
 	ld [hli], a
 	dec c
 	jr nz, .divideLoop
+; Direkt nach der Stat-Schleife zeigt hl auf wEnemyMonActualCatchRate (Layout:
+; 5 Stats + CatchRate + BaseExp). CatchRate überspringen — der Enemy ist tot,
+; sein Catch-Wert wird ohnehin nicht mehr gebraucht.
+	ld a, [wEnemyMonBaseExp]
+	ld hl, wEnemyMonBaseExp
 ; BaseExp: Floor-Division + Remainder
+	push af
 	xor a
 	ldh [hDividend], a
-	ld a, [hl]             ; a = OriginalBaseExp
+	pop af
 	ldh [hDividend + 1], a
 	ld a, [wTempByteValue]
 	ldh [hDivisor], a
