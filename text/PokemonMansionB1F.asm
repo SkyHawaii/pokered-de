@@ -38,8 +38,8 @@ _PokemonMansionB1FDiaryText::
 	para "MEWTU wird immer"
 	line "stärker."
 
-	para "Wir konnten die"
-	line "unkontrollierten"
-	cont "Wutausbrüche"
+	para "Seine wilden"
+	line "Wutausbrüche"
+	cont "konnten wir"
 	cont "nicht eindämmen!"
 	done

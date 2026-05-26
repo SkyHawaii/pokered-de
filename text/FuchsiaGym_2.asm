@@ -22,9 +22,8 @@ _FuchsiaGymKogaSoulBadgeInfoText::
 	line "SURFER nun auch"
 	cont "außerhalb von"
 	cont "Kämpfen nutzen!"
-
-	para "Bitte nimm auch"
-	line "dieses Geschenk!"
+	cont "Nimm bitte auch"
+	cont "dieses Geschenk!"
 	done
 
 _FuchsiaGymKogaReceivedTM06Text::
@@ -38,9 +37,9 @@ _FuchsiaGymKogaTM06ExplanationText::
 	text_start
 	para "TM06 ist TOXIN!"
 
-	para "Es ist eine mehr"
-	line "als 400 Jahre"
-	cont "alte Technik!"
+	para "Diese Technik ist"
+	line "über 400 Jahre"
+	cont "alt!"
 	done
 
 _FuchsiaGymKogaTM06NoRoomText::
@@ -55,12 +54,10 @@ _FuchsiaGymRocker1BattleText::
 	cont "Stärke Deiner"
 	cont "#MON ab!"
 
-	para "Es kommt auf"
-	line "die Strategie an!"
-
-	para "Intelligenz"
-	line "obsiegt über"
-	cont "rohe Kraft!"
+	para "Strategie zählt!"
+	line "Intelligenz"
+	cont "besiegt rohe"
+	cont "Kraft!"
 	done
 
 _FuchsiaGymRocker1EndBattleText::
@@ -194,12 +191,10 @@ _FuchsiaGymGymGuideChampInMakingText::
 	cont "unsichtbarer"
 	cont "Mauern!"
 
-	para "Du kannst KOGA"
-	line "sehen, ihn aber"
-	cont "nicht erreichen!"
-
-	para "Du mußt nach"
-	line "Lücken in den"
+	para "Du siehst KOGA,"
+	line "erreichst ihn"
+	cont "aber nur durch"
+	cont "Lücken in den"
 	cont "unsichtbaren"
 	cont "Mauern suchen!"
 	done

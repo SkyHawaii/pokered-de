@@ -2,19 +2,12 @@ _CeruleanCityRivalPreBattleText::
 	text "<RIVAL>: Hi,"
 	line "<PLAYER>!"
 
-	para "Du bist also"
-	line "immer noch "
-	cont "unterwegs!"
-
-	para "Mir geht es"
-	line "bestens! Ich habe"
-	cont "jede Menge neue,"
-	cont "starke #MON"
-	cont "gefangen!"
+	para "Immer noch"
+	line "unterwegs? Mir"
+	cont "geht's bestens!"
 
 	para "Zeig mal, was Du"
-	line "gefangen hast,"
-	cont "<PLAYER>!"
+	line "gefangen hast!"
 	done
 
 _CeruleanCityRivalDefeatedText::
@@ -36,29 +29,17 @@ _CeruleanCityRivalIWentToBillsText::
 	cont "verraten?"
 
 	para "Ich war bei BILL"
-	line "und habe mir"
-	cont "seine seltenen"
-	cont "#MON"
-	cont "zeigen lassen!"
+	line "und sah seine"
+	cont "seltenen #MON!"
 
 	para "Das hat mir"
-	line "einige Einträge"
-	cont "in meinem #DEX"
-	cont "gebracht!"
+	line "neue #DEX-"
+	cont "Einträge gebracht."
 
-	para "BILL ist weltweit"
-	line "als #MANIAC"
-	cont "bekannt!"
-
-	para "Er hat das "
-	line "#MON- "
-	cont "Lagersystem für"
-	cont "den PC"
-	cont "entwickelt!"
-
-	para "Du kannst Dich"
-	line "bei ihm dafür"
-	cont "bedanken!"
+	para "BILL ist ein"
+	line "#MANIAC und"
+	cont "erfand das PC-"
+	cont "Lagersystem!"
 
 	para "Naja, ich hau ab!"
 	line "Mach's mal gut!"
@@ -143,13 +124,10 @@ _CeruleanCityGuardText::
 	line "wurden beraubt."
 
 	para "Das TEAM ROCKET"
-	line "steckt hinter den"
-	cont "abscheulichen"
-	cont "Verbrechen!"
+	line "steckt dahinter!"
 
 	para "Sogar die POLIZEI"
-	line "ist gegen das"
-	cont "TEAM ROCKET"
+	line "ist gegen sie"
 	cont "machtlos!"
 	done
 
@@ -174,11 +152,9 @@ _CeruleanCityCooltrainerF1SlowbroWithdrawText::
 	line "ein #MON"
 	cont "zu kontrollieren!"
 
-	para "Ob Dein #MON"
-	line "gehorcht,  hängt"
-	cont "von Deinen"
-	cont "Fähigkeiten als"
-	cont "Trainer ab!"
+	para "Ob es gehorcht,"
+	line "hängt von Deinen"
+	cont "Trainerkünsten ab!"
 	done
 
 _CeruleanCitySlowbroTookASnoozeText::

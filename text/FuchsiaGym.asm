@@ -9,11 +9,8 @@ _FuchsiaGymKogaBeforeBattleText::
 	para "Wie Du willst!"
 	line "Erlebe eine Welt"
 	cont "des Schreckens,"
-	cont "bevor ich Dich"
-	cont "besiege!"
-
-	para "An meinen"
-	line "Schlaf- und Gift-"
+	cont "denn an meinen"
+	cont "Schlaf- und Gift-"
 	cont "Attacken sollst"
 	cont "Du verzweifeln!"
 	done

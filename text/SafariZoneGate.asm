@@ -21,9 +21,8 @@ _SafariZoneGateSafariZoneWorker1ThatllBe500PleaseText::
 	para "Wir verwenden"
 	line "hier spezielle"
 	cont "#BÄLLE."
-
-	para "<PLAYER> erhält"
-	line "30 SAFARI-BÄLLE!@"
+	cont "<PLAYER> erhält"
+	cont "30 SAFARI-BÄLLE!@"
 	text_end
 
 _SafariZoneGateSafariZoneWorker1CallYouOnThePAText::
@@ -90,20 +89,15 @@ _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
 	cont "SAFARI-BÄLLEN zu"
 	cont "fangen."
 
-	para "Wenn Du keine"
-	line "SAFARI-BÄLLE mehr"
-	cont "hast oder wenn"
-	cont "die Zeit "
-	cont "abgelaufen ist,"
-	cont "endet das Spiel!"
+	para "Ohne SAFARI-BÄLLE"
+	line "oder nach Ablauf"
+	cont "der Zeit endet"
+	cont "das Spiel!"
 
-	para "Bevor Du Dich auf"
-	line "die Jagd begibst,"
-	cont "solltest Du Raum"
-	cont "für neue #MON"
-	cont "schaffen und eine"
-	cont "freie #MON-BOX"
-	cont "anwählen!"
+	para "Schaffe vorher"
+	line "Platz und wähle"
+	cont "eine freie"
+	cont "#MON-BOX!"
 	done
 
 _SafariZoneGateSafariZoneWorker2YoureARegularHereText::

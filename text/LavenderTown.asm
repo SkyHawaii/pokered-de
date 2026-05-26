@@ -50,9 +50,8 @@ _LavenderTownSignText::
 
 _LavenderTownSilphScopeSignText::
 	text "SILPH SCOPE!"
-
-	para "Macht das"
-	line "Unsichtbare"
+	line "Macht das"
+	cont "Unsichtbare"
 	cont "sichtbar!"
 
 	para "SILPH CO."

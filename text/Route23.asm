@@ -12,9 +12,9 @@ _Route23YouDontHaveTheBadgeYetText::
 	text " noch"
 	cont "nicht!"
 
-	para "Nur wer ihn"
-	line "trägt, darf in"
-	cont "die PKMN-LIGA!@"
+	para "Nur mit ORDEN"
+	line "darfst Du in die"
+	cont "PKMN-LIGA!@"
 	text_end
 
 _Route23OhThatIsTheBadgeText::

@@ -5,9 +5,8 @@ _SaffronGateGuardGeeImThirstyText::
 	cont "so durstig..."
 
 	para "Halt! Stop!"
-
-	para "Der Durchgang"
-	line "ist gesperrt!"
+	line "Der Durchgang"
+	cont "ist gesperrt!"
 	done
 
 _SaffronGateGuardImParchedText::

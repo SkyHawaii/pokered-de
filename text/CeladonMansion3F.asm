@@ -17,22 +17,18 @@ _CeladonMansion3FWriterText::
 	cont "süß?"
 
 	para "Aber MISTY mag"
-	line "ich auch gerne!"
-
-	para "Und nicht zu"
-	line "vergessen,"
-	cont "SABRINA!"
+	line "ich auch gern!"
+	cont "Und SABRINA erst!"
 	done
 
 _CeladonMansion3FGameDesignerText::
 	text "Gefällt Dir das"
 	line "Spiel?"
 
-	para "Ich habe das"
-	line "Spiel gestaltet!"
-
-	para "Auch wenn es sehr"
-	line "mühsam ist, den"
+	para "Ich habe es"
+	line "gestaltet!"
+	cont "Auch wenn es sehr"
+	cont "mühsam ist, den"
 	cont "#DEX zu"
 	cont "erstellen: Gib"
 	cont "nicht auf!"

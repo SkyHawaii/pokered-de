@@ -8,14 +8,12 @@ _BrunoBeforeBattleText::
 	cont "#MON sehr"
 	cont "stark werden!"
 
-	para "Ich habe meine"
-	line "#MON pausenlos"
+	para "Meine #MON sind"
+	line "pausenlos"
 	cont "trainiert!"
-
-	para "<PLAYER>!"
-
-	para "Wir werden Dich"
-	line "mit unserer Kraft"
+	cont "<PLAYER>, wir"
+	cont "werden Dich"
+	cont "mit unserer Kraft"
 	cont "bezwingen!"
 
 	para "Zum Angriff!"

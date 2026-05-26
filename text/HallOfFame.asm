@@ -13,13 +13,12 @@ _HallOfFameOakText::
 	cont "ihre Heldentaten"
 	cont "ausgezeichnet!"
 
-	para "Zusätzlich werden"
-	line "hier all ihre"
-	cont "#MON geehrt!"
+	para "Auch all ihre"
+	line "#MON werden hier"
+	cont "geehrt!"
 
-	para "<PLAYER>!"
-	line "Du hast hart"
-	cont "gekämpft und die"
+	para "<PLAYER>! Du hast"
+	line "hart gekämpft und"
 	cont "Herausforderungen"
 	cont "der PKMN-LIGA"
 	cont "bestanden!"

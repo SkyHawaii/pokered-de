@@ -7,10 +7,9 @@ _CeladonMart5FGentlemanText::
 
 	para "KALZIUM steigert"
 	line "die Stärke von"
-	cont "SPEZIAL-ATTACKEN!"
-
-	para "CARBON erhöht die"
-	line "INITIATIVE."
+	cont "SPEZIAL-ATTACKEN,"
+	cont "CARBON die"
+	cont "INITIATIVE."
 	done
 
 _CeladonMart5FSailorText::
@@ -21,10 +20,8 @@ _CeladonMart5FSailorText::
 
 	para "PROTEIN steigert"
 	line "die ANGRIFFS-"
-	cont "STÄRKE."
-
-	para "EISEN stärkt die"
-	line "ABWEHR!"
+	cont "STÄRKE, EISEN"
+	cont "die ABWEHR!"
 	done
 
 _CeladonMart5FCurrentFloorSignText::

@@ -2,14 +2,13 @@ _SSAnne1FWaiterText::
 	text "Moin, moin, Du"
 	line "Landradde! Ich"
 	cont "bin der Steward"
-	cont "auf diesem"
-	cont "Kahn!"
+	cont "auf diesem Kahn!"
 
 	para "Ruf mich einfach,"
 	line "wenn Du einen"
 	cont "Wunsch hast!"
 
-	para "Verdammich,"
+	para "Verdammich, sehr"
 	line "gesprächig bist"
 	cont "Du aber nicht!"
 	done

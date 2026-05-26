@@ -2,11 +2,9 @@ _Route12SuperRodHouseFishingGuruDoYouLikeToFishText::
 	text "Mein Bruder ist"
 	line "der PROFI-ANGLER!"
 
-	para "Ich liebe den"
-	line "Angelsport!"
-
-	para "Möchtest Du auch"
-	line "angeln?"
+	para "Ich liebe Angeln!"
+	cont "Möchtest Du auch"
+	cont "angeln?"
 	done
 
 _Route12SuperRodHouseFishingGuruReceivedSuperRodText::
@@ -30,9 +28,9 @@ _Route12SuperRodHouseFishingGuruFishingWayOfLifeText::
 	line "nur ein Sport, es"
 	cont "ist eine Kunst!"
 
-	para "Nun ziehe los,"
-	line "um den großen"
-	cont "Fang zu landen!"
+	para "Zieh los und"
+	line "lande den großen"
+	cont "Fang!"
 	done
 
 _Route12SuperRodHouseFishingGuruThatsDisappointingText::
@@ -47,14 +45,12 @@ _Route12SuperRodHouseFishingGuruTryFishingText::
 	para "Benutze die"
 	line "SUPERANGEL in"
 	cont "allen Gewässern."
-	cont "Du kannst die"
-	cont "verschiedensten"
-	cont "#MON damit"
-	cont "fangen!"
+	cont "Damit fängst Du"
+	cont "viele #MON!"
 
-	para "Gehe angeln, wann"
-	line "immer die Zeit es"
-	cont "erlaubt!"
+	para "Geh angeln, wann"
+	line "immer Du Zeit"
+	cont "hast!"
 	done
 
 _Route12SuperRodHouseFishingGuruNoRoomText::

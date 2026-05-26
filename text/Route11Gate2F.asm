@@ -8,11 +8,9 @@ _Route11Gate2FOaksAideItemfinderDescriptionText::
 	line "spürt Items in"
 	cont "Deiner Nähe auf!"
 
-	para "Allerdings ortet"
-	line "er nicht die"
-	cont "exakte Position!"
-	cont "Du mußt Dich"
-	cont "gut umschauen!"
+	para "Die genaue Stelle"
+	line "zeigt er nicht."
+	cont "Such also gut!"
 	done
 
 _Route11Gate2FLeftBinocularsSnorlaxText::

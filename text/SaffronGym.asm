@@ -8,14 +8,10 @@ _SaffronGymSabrinaText::
 	cont "seit ich ein Kind "
 	cont "war."
 
-	para "Zunächst habe ich"
-	line "gelernt, mit"
-	cont "PSYCHOKINESE"
-	cont "Löffel"
-	cont "zu verbiegen."
-
-	para "Ich verabscheue"
-	line "den Kampf!"
+	para "Zuerst bog ich"
+	line "nur Löffel damit."
+	cont "Ich verabscheue"
+	cont "den Kampf!"
 	cont "Aber wenn Du es"
 	cont "wünschst, beweise"
 	cont "ich Dir meine"
@@ -28,13 +24,10 @@ _SaffronGymSabrinaReceivedMarshBadgeText::
 	cont "Aber verloren ist"
 	cont "verloren."
 
-	para "Ich muß gestehen,"
-	line "ich habe mich"
-	cont "nicht allzusehr"
-	cont "angestrengt!"
-
-	para "Ich schenke Dir"
-	line "den SUMPFORDEN!@"
+	para "Ich habe mich"
+	line "nicht allzusehr"
+	cont "angestrengt! Nimm"
+	cont "den SUMPFORDEN!@"
 	text_end
 
 _SaffronGymSabrinaPostBattleAdviceText::
@@ -53,15 +46,9 @@ _SaffronGymSabrinaMarshBadgeInfoText::
 	cont "Befehlen folgen!"
 
 	para "Stärkere #MON"
-	line "könnten sich Dir"
-	cont "widersetzen und"
-	cont "Deine Befehle"
-	cont "ignorieren!"
-
-	para "Achte darauf, daß"
-	line "Du Deine #MON"
-	cont "jederzeit unter"
-	cont "Kontrolle hast!"
+	line "könnten Deine"
+	cont "Befehle mißachten."
+	cont "Beherrsche sie!"
 
 	para "Warte! Nimm noch"
 	line "diese TM von mir!"
@@ -100,12 +87,8 @@ _SaffronGymGuideChampInMakingText::
 	cont "Kräften!"
 
 	para "KAMPF-#MON"
-	line "sind PSYCHOKINESE"
-	cont "nicht gewachsen!"
-
-	para "Sie haben nicht"
-	line "einmal den Hauch"
-	cont "einer Chance!"
+	line "haben dagegen"
+	cont "kaum eine Chance!"
 	done
 
 _SaffronGymGuideBeatSabrinaText::

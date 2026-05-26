@@ -11,11 +11,9 @@ _Route15Gate2FOaksAideExpAllText::
 	cont "unter den #MON"
 	cont "aufgeteilt."
 
-	para "Lege den"
-	line "EP-TEILER via PC"
-	cont "ab, wenn Du ihn"
-	cont "nicht benutzen"
-	cont "möchtest."
+	para "Lege ihn im PC ab,"
+	line "wenn Du ihn nicht"
+	cont "nutzen möchtest."
 	done
 
 _Route15Gate2FBinocularsText::

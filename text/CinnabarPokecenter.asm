@@ -18,6 +18,5 @@ _CinnabarPokecenterGentlemanText::
 	cont "Tausch erhält,"
 	cont "wächst schneller!"
 
-	para "Du solltest es"
-	line "ausprobieren!"
+	para "Probier es aus!"
 	done

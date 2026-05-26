@@ -1,23 +1,18 @@
 _BillsHouseBillImNotAPokemonText::
 	text "Hallo! Ich"
 	line "bin ein #MON!"
-	cont "Spaß beiseite, "
+	cont "Spaß beiseite,"
 	cont "ich bin keines!"
 
 	para "Nenn mich einfach"
 	line "BILL! Ich bin ein"
-	cont "waschechter"
-	cont "#MANIAC!"
-	cont "Glaubst Du mir"
-	cont "nicht?"
+	cont "echter #MANIAC!"
 
 	para "Mir ist ein"
 	line "Experiment"
-	cont "mißglückt! Dabei"
-	cont "wurden meine"
-	cont "Zellen mit denen"
-	cont "eines #MON"
-	cont "kombiniert!"
+	cont "mißglückt: Ich"
+	cont "stecke mit einem"
+	cont "#MON zusammen!"
 
 	para "Wie sieht es aus?"
 	line "Hilfst Du mir?"
@@ -50,15 +45,13 @@ _BillsHouseBillThankYouText::
 	cont "etwas gut!"
 
 	para "Bist Du hier, um"
-	line "Dir meine"
-	cont "#MON-SAMMLUNG"
+	line "meine Sammlung"
 	cont "anzusehen? Nein?"
-	cont "Das ist schade!"
+	cont "Schade!"
 
 	para "Wie kann ich Dir"
-	line "nur danken?"
-	cont "Nimm einfach das"
-	cont "hier..."
+	line "danken? Nimm"
+	cont "einfach dies..."
 	prompt
 
 _SSTicketReceivedText::

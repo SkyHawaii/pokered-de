@@ -7,11 +7,9 @@ _FightingDojoKarateMasterText::
 	cont "PKMN-ARENA!"
 
 	para "Du forderst mich"
-	line "heraus? Also gut!"
-	cont "Ich kenne keine"
-	cont "Gnade!"
-
-	para "Los geh",$B3,"'s!"
+	line "heraus? Gut!"
+	cont "Keine Gnade!"
+	cont "Los geh",$B3,"'s!"
 	done
 
 _FightingDojoKarateMasterDefeatedText::
@@ -24,13 +22,11 @@ _FightingDojoKarateMasterIWillGiveYouAPokemonText::
 	text "Ich bin Deiner"
 	line "Gnade unwürdig!"
 
-	para "Trotzdem flehe"
-	line "ich Dich an,"
-	cont "unser Emblem"
-	cont "nicht als Trophäe"
-	cont "mitzunehmen!"
+	para "Bitte nimm unser"
+	line "Emblem nicht als"
+	cont "Trophäe mit!"
 
-	para "Zum Ersatz gebe"
+	para "Als Ersatz gebe"
 	line "ich Dir ein"
 	cont "preisgekröntes"
 	cont "KAMPF-#MON!"

@@ -179,10 +179,9 @@ _Route17TrainerTips1Text::
 	line "einzigartig."
 
 	para "Selbst gleiche"
-	line "#MON mit"
-	cont "identischem Level"
-	cont "unterscheiden"
-	cont "sich voneinander."
+	line "#MON desselben"
+	cont "Levels können"
+	cont "verschieden sein."
 	done
 
 _Route17TrainerTips2Text::

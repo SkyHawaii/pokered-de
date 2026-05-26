@@ -3,11 +3,9 @@ _FuchsiaGoodRodHouseFishingGuruText::
 	line "ältere Bruder des"
 	cont "PROFIANGLERS!"
 
-	para "Ich liebe"
-	line "den Angelsport!"
-
-	para "Angelst Du auch"
-	line "gerne?"
+	para "Ich liebe Angeln!"
+	cont "Angelst Du auch"
+	cont "gerne?"
 	done
 
 _FuchsiaGoodRodHouseFishingGuruReceivedGoodRodText::

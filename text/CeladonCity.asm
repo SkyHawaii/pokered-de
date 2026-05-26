@@ -38,9 +38,8 @@ _CeladonCityGramps3Text::
 
 	para "Ich kenne Dich"
 	line "vom Sehen! Aber"
-	cont "ich hatte bisher"
-	cont "keine Zeit, Dich"
-	cont "anzusprechen!"
+	cont "bisher fehlte mir"
+	cont "die Zeit!"
 
 	para "Hier, nimm dieses"
 	line "Geschenk!"
@@ -58,10 +57,8 @@ _CeladonCityGramps3TM41ExplanationText::
 	line "WEICHEI!"
 
 	para "Nur ein #MON"
-	line "kann es benutzen!"
-
-	para "Dieses #MON"
-	line "heißt CHANEIRA!"
+	line "kann es benutzen:"
+	cont "CHANEIRA!"
 	done
 
 _CeladonCityGramps3TM41NoRoomText::
@@ -106,17 +103,12 @@ _CeladonCityTrainerTips1Text::
 	cont "von Attacken!"
 
 	para "ANGRIFFPLUS"
-	line "erhöht die"
-	cont "Wahrscheinlich-"
-	cont "keit, einen"
-	cont "Volltreffer zu"
-	cont "landen!"
+	line "erhöht die Chance"
+	cont "auf Volltreffer!"
 
-	para "Diese Items"
-	line "kannst Du im"
-	cont "EINKAUFSZENTRUM"
-	cont "von PRISMANIA"
-	cont "CITY kaufen!"
+	para "Beides gibt's im"
+	line "EINKAUFSZENTRUM"
+	cont "von PRISMANIA."
 	done
 
 _CeladonCitySignText::
@@ -156,11 +148,9 @@ _CeladonCityTrainerTips2Text::
 	cont "wie Feuer- oder"
 	cont "Wasser-Attacken!"
 
-	para "Diese Items"
-	line "kannst Du im"
-	cont "EINKAUFSZENTRUM"
-	cont "von PRISMANIA"
-	cont "CITY erstehen!"
+	para "Du bekommst es im"
+	line "EINKAUFSZENTRUM"
+	cont "von PRISMANIA."
 	done
 
 _CeladonCityPrizeExchangeSignText::

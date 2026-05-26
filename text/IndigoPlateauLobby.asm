@@ -9,8 +9,8 @@ _IndigoPlateauLobbyGymGuideText::
 
 	para "Wenn Du einen"
 	line "Kampf verlierst,"
-	cont "mußt Du ganz von"
-	cont "vorn beginnen!"
+	cont "mußt Du wieder"
+	cont "von vorn beginnen!"
 	done
 
 _IndigoPlateauLobbyCooltrainerFText::

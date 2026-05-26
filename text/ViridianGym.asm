@@ -11,9 +11,8 @@ _ViridianGymGiovanniPreBattleText::
 	para "Aber Du hast"
 	line "mich schon wieder"
 	cont "aufgespürt!"
-	cont "Also gut! Dieses"
-	cont "Mal kenne ich"
-	cont "keine Gnade!"
+	cont "Dieses Mal kenne"
+	cont "ich keine Gnade!"
 
 	para "Ich, GIOVANNI,"
 	line "der größte aller"
@@ -44,9 +43,8 @@ _ViridianGymGiovanniPostBattleAdviceText::
 	line "ich mein Leben"
 	cont "dem Studium der"
 	cont "#MON!"
-
-	para "Vielleicht sehen"
-	line "wir uns eines"
+	cont "Vielleicht sehen"
+	cont "wir uns eines"
 	cont "Tages wieder!"
 	cont "Lebe wohl!@"
 	text_end
@@ -60,13 +58,9 @@ _ViridianGymGiovanniEarthBadgeInfoText::
 
 	para "Er stellt den"
 	line "Beweis Deines"
-	cont "Könnens als"
-	cont "#MON-TRAINER"
-	cont "dar!"
-
-	para "Außerdem gewährt"
-	line "er Dir den Zugang"
-	cont "zur PKMN-LIGA!"
+	cont "Könnens dar und"
+	cont "öffnet Dir die"
+	cont "PKMN-LIGA!"
 
 	para "Nimm dieses"
 	line "Geschenk mit in"
@@ -89,10 +83,8 @@ _ViridianGymGiovanniTM27ExplanationText::
 	cont "mit nur einem"
 	cont "Treffer besiegen!"
 
-	para "Ich habe sie vor"
-	line "langer Zeit"
-	cont "geschaffen, als"
-	cont "ich hier noch"
+	para "Ich schuf sie,"
+	line "als ich hier noch"
 	cont "ARENALEITER war."
 	done
 
@@ -262,13 +254,11 @@ _ViridianGymGuidePreBattleText::
 	cont "ARENALEITERS von"
 	cont "VERTANIA CITY!"
 
-	para "Soweit ich weiß,"
-	line "ist er von allen"
-	cont "ARENALEITERN der"
-	cont "gefährlichste!"
-
-	para "Die Trainer hier"
-	line "setzen gerne"
+	para "Er gilt als der"
+	line "gefährlichste"
+	cont "ARENALEITER!"
+	cont "Die Trainer hier"
+	cont "setzen gerne"
 	cont "BODEN-#MON"
 	cont "ein!"
 	done

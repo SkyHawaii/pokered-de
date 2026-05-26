@@ -10,35 +10,22 @@ _ChampionsRoomRivalIntroText::
 	cont "um mich in Form"
 	cont "zu halten!"
 
-	para "Während ich"
-	line "meinen #DEX"
-	cont "aktualisierte,"
-	cont "habe ich nur die"
-	cont "stärksten #MON"
-	cont "ausgewählt!"
+	para "Für meinen #DEX"
+	line "wählte ich nur"
+	cont "die stärksten"
+	cont "#MON aus!"
 
-	para "Aber nicht nur"
-	line "das: Ich habe"
-	cont "Teams aufgebaut,"
-	cont "die ALLE #MON"
+	para "Ich baute Teams,"
+	line "die ALLE #MON"
 	cont "besiegen können!"
 
-	para "Und nun..."
-
-	para "...bin ich"
+	para "Und nun bin ich"
 	line "Champion der"
 	cont "PKMN-LIGA!"
 
-	para "<PLAYER>!"
-
-	para "Weißt Du, was das"
-	line "bedeutet?"
-
-	para "Ich werde es Dir"
-	line "sagen!"
-
-	para "Ich bin der"
-	line "mächtigste"
+	para "<PLAYER>! Das"
+	line "bedeutet: Ich bin"
+	cont "der mächtigste"
 	cont "Trainer der Welt!"
 	done
 
@@ -52,13 +39,9 @@ _RivalDefeatedText::
 	para "Mein Siegeszug"
 	line "ist schon vorbei?"
 
-	para "Nach all den"
-	line "Anstrengungen,"
-	cont "LIGA-CHAMPION"
-	cont "zu werden?"
-
-	para "Das ist nicht"
-	line "fair!"
+	para "Nach all der Mühe,"
+	line "LIGA-CHAMPION zu"
+	cont "werden? Unfair!"
 	prompt
 
 _RivalVictoryText::
@@ -69,16 +52,14 @@ _RivalVictoryText::
 	line "zu gut für Dich, "
 	cont "<PLAYER>!"
 
-	para "Immerhin hast"
-	line "Du es bis hierher"
-	cont "geschafft! Ich"
-	cont "hätte aber mehr"
-	cont "von Dir erwartet,"
+	para "Du kamst weit,"
+	line "aber ich hätte"
+	cont "mehr erwartet,"
 	cont "<RIVAL>!"
 
 	para "Vielleicht beim"
-	line "nächsten mal, Du"
-	cont "Kämpfer! Hahaha!"
+	line "nächsten Mal!"
+	cont "Hahaha!"
 	prompt
 
 _ChampionsRoomRivalAfterBattleText::
@@ -86,12 +67,10 @@ _ChampionsRoomRivalAfterBattleText::
 	line "ich verloren?"
 
 	para "Ich habe meine"
-	line "#MON doch"
-	cont "sehr sorgfältig"
+	line "#MON sorgfältig"
 	cont "aufgezogen..."
-
-	para "Verdammt!"
-	line "Du bist der neue"
+	cont "Verdammt! Du bist"
+	cont "der neue"
 	cont "CHAMPION der"
 	cont "PKMN-LIGA!"
 
@@ -121,9 +100,8 @@ _ChampionsRoomOakCongratulatesPlayerText::
 	cont "den Weg gemacht"
 	cont "hast!"
 
-	para "<PLAYER>,"
-	line "Du bist schon"
-	cont "viel erfahrener!"
+	para "<PLAYER>, Du bist"
+	line "viel erfahrener!"
 	done
 
 _ChampionsRoomOakDisappointedWithRivalText::
@@ -131,28 +109,21 @@ _ChampionsRoomOakDisappointedWithRivalText::
 	line "Du hast mich"
 	cont "sehr enttäuscht!"
 
-	para "Als ich hörte, "
-	line "Du hättest die"
-	cont "TOP VIER besiegt,"
-	cont "kam ich hierher!"
-
-	para "Doch als ich"
-	line "ankam, warst Du"
+	para "Ich hörte, Du"
+	line "hättest die TOP"
+	cont "VIER besiegt."
+	cont "Doch nun bist Du"
 	cont "der Verlierer!"
 
 	para "<RIVAL>, weißt"
 	line "Du, warum Du"
 	cont "verloren hast?"
 
-	para "Du hast Deinen"
-	line "#MON nicht"
-	cont "genug Liebe"
-	cont "und Vertrauen "
-	cont "entgegengebracht!"
-
-	para "So wirst Du"
-	line "niemals Sieger"
-	cont "werden!"
+	para "Du gabst Deinen"
+	line "#MON zu wenig"
+	cont "Liebe und"
+	cont "Vertrauen!"
+	cont "So siegst Du nie!"
 	done
 
 _ChampionsRoomOakComeWithMeText::
@@ -164,10 +135,9 @@ _ChampionsRoomOakComeWithMeText::
 	cont "alleine Dein"
 	cont "Verdienst war!"
 
-	para "Die Beziehung"
+	para "Deine Beziehung"
 	line "zu Deinen #MON"
 	cont "ist vorbildlich!"
-
-	para "<PLAYER>!"
-	line "Folge mir!"
+	cont "<PLAYER>, folge"
+	cont "mir!"
 	done

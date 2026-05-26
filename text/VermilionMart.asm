@@ -6,16 +6,10 @@ _VermilionMartCooltrainerMText::
 	cont "mißbrauchen."
 
 	para "Das TEAM ROCKET"
-	line "macht mit"
+	line "handelt mit"
 	cont "seltenen #MON"
-	cont "Geschäfte."
-
-	para "Die #MON, die"
-	line "ihrer Meinung"
-	cont "nach nicht selten"
-	cont "genug sind,"
-	cont "werden von"
-	cont "ihnen ausgesetzt."
+	cont "und setzt den"
+	cont "Rest einfach aus."
 	done
 
 _VermilionMartCooltrainerFText::

@@ -2,11 +2,9 @@ _VermilionOldRodHouseFishingGuruDoYouLikeToFishText::
 	text "Ich bin der"
 	line "PROFIANGLER!"
 
-	para "Ich liebe den"
-	line "Angelsport!"
-
-	para "Angelst Du auch"
-	line "gerne?"
+	para "Ich liebe Angeln!"
+	line "Angelst Du auch"
+	cont "gerne?"
 	done
 
 _VermilionOldRodHouseFishingGuruTakeThisText::
@@ -28,9 +26,8 @@ _VermilionOldRodHouseFishingGuruFishingIsAWayOfLifeText::
 
 	para "Angeln ist meine"
 	line "Leidenschaft!"
-
-	para "Suche in Seen"
-	line "und Flüssen und"
+	cont "Suche in Seen"
+	cont "und Flüssen und"
 	cont "lande den großen"
 	cont "Fang!"
 	done

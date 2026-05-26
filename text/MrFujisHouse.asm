@@ -17,9 +17,8 @@ _MrFujisHouseLittleGirlThisIsMrFujisHouseText::
 
 	para "Er ist sehr"
 	line "fürsorglich!"
-
-	para "Er kümmert sich"
-	line "um ausgesetzte"
+	cont "Er kümmert sich"
+	cont "um ausgesetzte"
 	cont "und verwaiste"
 	cont "#MON!"
 	done
@@ -46,9 +45,9 @@ _MrFujisHouseMrFujiIThinkThisMayHelpYourQuestText::
 	line "#DEX  nicht"
 	cont "vollenden, wenn"
 	cont "Du Deinen #MON"
-	cont "nicht genügend"
-	cont "Liebe und Respekt"
-	cont "entgegenbringst."
+	cont "nicht mit Liebe"
+	cont "und Respekt"
+	cont "begegnest."
 
 	para "Dies wird Dir bei"
 	line "Deinem Abenteuer"
@@ -68,10 +67,10 @@ _MrFujisHouseMrFujiPokeFluteExplanationText::
 	para "Schlafende"
 	line "#MON wachen"
 	cont "auf, wenn sie"
-	cont "das Spiel der"
-	cont "#FLÖTE hören!"
+	cont "die #FLÖTE"
+	cont "hören!"
 
-	para "Du kannst damit"
+	para "Damit weckst Du"
 	line "alle schlafenden"
 	cont "#MON wecken!"
 	done
@@ -96,7 +95,6 @@ _MrFujisHouseMrFujiPokedexText::
 	para "Es sind keine"
 	line "Teilnahmekarten"
 	cont "mehr vorhanden!"
-
-	para "Sie wurden alle"
-	line "abgeschickt!"
+	cont "Alle wurden"
+	cont "abgeschickt!"
 	done

@@ -14,17 +14,13 @@ _CeladonMart1FDirectorySignText::
 	line "INFORMATION"
 
 	para "S1: UTENSILIEN"
-	line "FÜR TRAINER"
-
-	para "S2: VIDEOSPIELE"
+	line "S2: VIDEOSPIELE"
 
 	para "S3: GESCHENK-"
 	line "ARTIKEL"
 
 	para "S4: DROGERIE"
-
-	para "DACHGARTEN:"
-	line "AUTOMATEN"
+	line "DACH: AUTOMATEN"
 	done
 
 _CeladonMart1FCurrentFloorSignText::

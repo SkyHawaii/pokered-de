@@ -34,22 +34,17 @@ _PokemonTower2FRivalHowsYourDexText::
 	text "Wie macht sich"
 	line "Dein #DEX,"
 	cont "Kumpel? Ich habe"
-	cont "kürzlich ein"
-	cont "TRAGOSSO"
+	cont "ein TRAGOSSO"
 	cont "gefangen!"
 
 	para "Allerdings habe"
 	line "ich noch kein"
 	cont "KNOGGA!"
 
-	para "Ich glaube, von"
-	line "diesen #MON"
-	cont "gibt es nur noch"
-	cont "wenige. Also, ich"
-	cont "habe viel zu tun!"
-	cont "Ich muß weiter!"
-
-	para "Dann bis später!"
+	para "Davon gibt es"
+	line "wohl nur noch"
+	cont "wenige. Ich muß"
+	cont "weiter! Bis dann!"
 	done
 
 _PokemonTower2FChannelerText::

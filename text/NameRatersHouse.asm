@@ -23,11 +23,8 @@ _NameRatersHouseNameRaterGiveItANiceNameText::
 	cont "Ein schöner Name!"
 
 	para "Gefällt er Dir"
-	line "noch immer, oder"
-	cont "möchtest Du ihn"
-	cont "ändern?"
-
-	para "Was möchtest Du?"
+	line "noch, oder willst"
+	cont "Du ihn ändern?"
 	done
 
 _NameRatersHouseNameRaterWhatShouldWeNameItText::

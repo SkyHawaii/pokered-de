@@ -34,9 +34,8 @@ _CeladonDinerGymGuideImFlatOutBustedText::
 	line "ruhig aus!"
 
 	para "Ich bin pleite!"
-
-	para "Jetzt ist Schluß"
-	line "damit! Ich werde"
+	line "Jetzt ist Schluß"
+	cont "damit! Ich werde"
 	cont "niemals wieder"
 	cont "zocken!"
 

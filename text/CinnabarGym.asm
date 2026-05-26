@@ -8,11 +8,9 @@ _CinnabarGymBlainePreBattleText::
 	para "Meine FEUER-"
 	line "#MON lassen"
 	cont "die Siegesträume"
-	cont "meiner Gegner in"
-	cont "Flammen aufgehen!"
-
-	para "Du solltest schon"
-	line "mal FEUERHEILER"
+	cont "meiner Gegner"
+	cont "verbrennen!"
+	cont "Halte FEUERHEILER"
 	cont "parat halten!"
 	done
 
@@ -44,7 +42,7 @@ _CinnabarGymBlaineVolcanoBadgeInfoText::
 	cont "FÄHIGKEITEN"
 	cont "Deiner #MON!"
 
-	para "Nimm zusätzlich"
+	para "Nimm dazu noch"
 	line "dieses Geschenk!"
 	done
 
@@ -66,7 +64,7 @@ _CinnabarGymBlaineTM38ExplanationText::
 	cont "Attacke erlernen!"
 
 	para "GLUTEXO und"
-	line "PONITA sind dafür"
+	line "PONITA sind"
 	cont "prädestiniert!"
 	done
 
@@ -219,12 +217,10 @@ _CinnabarGymGymGuideChampInMakingText::
 	cont "FEUER-#MON-"
 	cont "Spezialist!"
 
-	para "Du solltest sein"
-	line "Mütchen mit"
-	cont "Wasser kühlen!"
-
-	para "Und besorge Dir"
-	line "FEUERHEILER!"
+	para "Kühl sein Mütchen"
+	line "mit Wasser!"
+	cont "Und nimm"
+	cont "FEUERHEILER mit!"
 	done
 
 _CinnabarGymGymGuideBeatBlaineText::

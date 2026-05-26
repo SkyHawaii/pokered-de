@@ -14,13 +14,8 @@ _PokemonTower7FMrFujiRescueText::
 
 	para "Die Seele des"
 	line "KNOGGA sollte"
-	cont "nun in die ewigen"
-	cont "Jagdgründe"
-	cont "eingekehrt sein."
-
-	para "Trotzdem danke"
-	line "ich Dir für Deine"
-	cont "Sorge um mich!"
+	cont "nun Frieden"
+	cont "gefunden haben."
 
 	para "Folge mir in das"
 	line "PKMN-CLUBHAUS am"

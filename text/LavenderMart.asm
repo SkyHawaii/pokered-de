@@ -3,17 +3,15 @@ _LavenderMartBaldingGuyText::
 	line "Items, die die"
 	cont "Fähigkeiten"
 	cont "meiner #MON"
-	cont "während eines"
-	cont "Kampfes"
-	cont "verbessern!"
+	cont "im Kampf stärken!"
 
 	para "Zum Beispiel"
 	line "X-ANGRIFF,"
 	cont "X-ABWEHR, X-TEMPO"
 	cont "und X-SPEZIAL."
 
-	para "Weißt Du, wo ich"
-	line "sie kaufen kann?"
+	para "Wo kann ich sie"
+	line "kaufen?"
 	done
 
 _LavenderMartCooltrainerMReviveText::

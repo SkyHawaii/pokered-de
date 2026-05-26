@@ -38,17 +38,10 @@ _Route24CooltrainerM1JoinTeamRocketText::
 	cont "für teuflische"
 	cont "Zwecke!"
 
-	para "Möchtest Du"
-	line "beitreten?"
-
-	para "Wirklich nicht?"
-
 	para "Komm schon,"
 	line "werde Mitglied!"
-
-	para "Ich empfehle Dir,"
-	line "ein Mitglied zu"
-	cont "werden!"
+	cont "Ich empfehle es"
+	cont "Dir wirklich!"
 
 	para "Ich glaube, ich"
 	line "sollte ein wenig"

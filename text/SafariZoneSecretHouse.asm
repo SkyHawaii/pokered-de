@@ -8,11 +8,8 @@ _SafariZoneSecretHouseFishingGuruYouHaveWonText::
 
 	para "Ich dachte schon,"
 	line "niemand würde den"
-	cont "großen Preis"
-	cont "jemals gewinnen!"
-
-	para "Glückwunsch! Du"
-	line "hast gewonnen!"
+	cont "Preis gewinnen!"
+	cont "Glückwunsch!"
 	prompt
 
 _SafariZoneSecretHouseFishingGuruReceivedHM03Text::
@@ -31,11 +28,10 @@ _SafariZoneSecretHouseFishingGuruHM03ExplanationText::
 	cont "über das Wasser"
 	cont "transportieren!"
 
-	para "Das BESTE ist"
-	line "aber, daß Du"
-	cont "diese VM benutzen"
-	cont "kannst, so oft Du"
-	cont "möchtest!"
+	para "Und das Beste:"
+	line "Du kannst die VM"
+	cont "beliebig oft"
+	cont "benutzen!"
 
 	para "Ist das nicht"
 	line "irre? Du bist ein"

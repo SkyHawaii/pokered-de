@@ -11,13 +11,10 @@ _AgathaBeforeBattleText::
 	para "Er war einmal ein"
 	line "gutaussehender,"
 	cont "stattlicher Mann!"
-	cont "Doch das war vor"
-	cont "Jahrzehnten!"
-
-	para "Heute kümmert er"
-	line "sich nur noch um"
+	cont "Doch heute kümmert"
+	cont "er sich nur um"
 	cont "seinen #DEX!"
-	cont "Aber #MON"
+	cont "#MON"
 	cont "wollen ja"
 	cont "kämpfen!"
 

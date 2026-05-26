@@ -15,9 +15,8 @@ _FuchsiaBillsGrandpasHouseBillsGrandpaText::
 
 	para "Er ist mein"
 	line "Enkel!"
-
-	para "Schon als kleines"
-	line "Kind hat er gerne"
+	cont "Schon als kleines"
+	cont "Kind hat er gerne"
 	cont "alles Mögliche"
 	cont "gesammelt!"
 	done

@@ -65,13 +65,9 @@ _WardensHouseWardenHM04ExplanationText::
 	cont "in der SAFARI-"
 	cont "ZONE gefunden?"
 
-	para "Man gewinnt eine"
-	line "VM, wenn man es"
-	cont "findet!"
-
-	para "Angeblich handelt"
-	line "es sich bei der"
-	cont "VM um SURFER."
+	para "Dort gewinnt man"
+	line "eine VM. Es soll"
+	cont "SURFER sein."
 	done
 
 _WardensHouseWardenHM04NoRoomText::

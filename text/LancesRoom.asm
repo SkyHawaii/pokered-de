@@ -16,18 +16,14 @@ _LancesRoomLanceBeforeBattleText::
 	para "Sie sind schwer"
 	line "zu fangen und"
 	cont "zu zähmen!"
-	cont "Doch die Mühe"
-	cont "lohnt sich!"
+	cont "Doch sie sind fast"
+	cont "unbesiegbar!"
 
-	para "Sie sind beinahe"
-	line "unbesiegbar!"
-
-	para "Bist Du bereit,"
-	line "dem Schicksal ins"
-	cont "Auge zu blicken?"
-
-	para "Für Dich endet"
-	line "der Ausflug in"
+	para "Blick Deinem"
+	line "Schicksal ins"
+	cont "Auge! Für Dich"
+	cont "endet"
+	cont "der Ausflug in"
 	cont "die PKMN-Liga"
 	cont "hier, <PLAYER>!"
 	done
@@ -52,22 +48,16 @@ _LancesRoomLanceAfterBattleText::
 	line "Champion der"
 	cont "PKMN-LIGA!"
 
-	para "Mmh, eigentlich"
-	line "wärst Du es! Aber"
-	cont "Du mußt noch eine"
-	cont "Herausforderung"
-	cont "bestehen!"
-
-	para "Ein weiterer"
-	line "Trainer erwartet"
-	cont "Dich! Es ist..."
+	para "Eigentlich wärst"
+	line "Du es! Doch ein"
+	cont "Trainer wartet"
+	cont "noch auf Dich..."
 
 	para "<RIVAL>! Auch"
 	line "er hat die TOP"
 	cont "VIER besiegt!"
 
-	para "Er ist der"
-	line "amtierende"
-	cont "Champion der"
+	para "Er ist der neue"
+	line "Champion der"
 	cont "PKMN-Liga!@"
 	text_end

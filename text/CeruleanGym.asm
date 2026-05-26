@@ -4,22 +4,18 @@ _CeruleanGymMistyPreBattleText::
 	cont "noch nie gesehen!"
 
 	para "Wenn ein Trainer"
-	line "zum Profi werden"
-	cont "möchte, muß er"
-	cont "sich eine"
-	cont "#MON-TAKTIK"
-	cont "erarbeiten!"
+	line "Profi werden will,"
+	cont "braucht er eine"
+	cont "#MON-TAKTIK!"
 
 	para "Auf welche Weise"
 	line "fängst Du Deine"
 	cont "#MON?"
 
 	para "Meine Strategie"
-	line "basiert auf dem"
-	cont "gnadenlosen"
-	cont "Offensiv-Einsatz"
-	cont "von WASSER-"
-	cont "#MON!"
+	line "ist gnadenlose"
+	cont "Offensive mit"
+	cont "WASSER-#MON!"
 	done
 
 _CeruleanGymMistyTM11ExplanationText::
@@ -35,27 +31,18 @@ _CeruleanGymMistyCascadeBadgeInfoText::
 	text "Der QUELLORDEN"
 	line "läßt alle #MON"
 	cont "bis Level 30"
-	cont "Deinen Befehlen"
-	cont "gehorchen!"
-
-	para "Sogar Außenseiter"
-	line "gehorchen Dir!"
+	cont "Dir gehorchen,"
+	cont "auch Außenseiter!"
 
 	para "Deine #MON"
-	line "können den"
+	line "können nun"
 	cont "ZERSCHNEIDER"
-	cont "nun jederzeit "
-	cont "einsetzen!"
-
-	para "Du kannst kleine"
-	line "Büsche zerhacken"
-	cont "und so neue Wege"
-	cont "freilegen!"
+	cont "jederzeit nutzen!"
 
 	para "Zu guter Letzt"
 	line "schenke ich Dir"
-	cont "noch meine"
-	cont "Lieblings-TM!"
+	cont "meine Lieblings-"
+	cont "TM!"
 	done
 
 _CeruleanGymMistyReceivedTM11Text::
@@ -73,12 +60,10 @@ _CeruleanGymMistyReceivedCascadeBadgeText::
 	text "Wow! Du"
 	line "bist sehr gut!"
 
-	para "Alles klar!"
-
 	para "Ich überlasse Dir"
 	line "den QUELLORDEN"
-	cont "als Zeichen"
-	cont "Deines Triumphes!@"
+	cont "als Zeichen Deines"
+	cont "Triumphes!@"
 	text_end
 
 _CeruleanGymBattleText1::
@@ -128,9 +113,6 @@ _CeruleanGymGymGuideChampInMakingText::
 	text "Hey! Warte, Du"
 	line "Champion in spe!"
 
-	para "Ich habe einen"
-	line "Tip für Dich!"
-
 	para "MISTY, die"
 	line "ARENALEITERIN,"
 	cont "kämpft mit"
@@ -142,9 +124,8 @@ _CeruleanGymGymGuideChampInMakingText::
 	cont "entziehen!"
 
 	para "ELEKTRO-#MON"
-	line "dürften sich auch"
-	cont "als nützlich"
-	cont "erweisen!"
+	line "sind ebenfalls"
+	cont "nützlich!"
 	done
 
 _CeruleanGymGymGuideBeatMistyText::

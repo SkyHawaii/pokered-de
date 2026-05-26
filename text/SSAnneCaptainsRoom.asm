@@ -6,9 +6,8 @@ _SSAnneCaptainsRoomRubCaptainsBackText::
 	para "<PLAYER> massiert"
 	line "dem KAPITÄN den"
 	cont "Rücken!"
-
-	para "Rubbel..."
-	line "Schrubb...@"
+	cont "Rubbel..."
+	cont "Schrubb...@"
 	text_end
 
 _SSAnneCaptainsRoomCaptainIFeelMuchBetterText::
@@ -23,12 +22,9 @@ _SSAnneCaptainsRoomCaptainIFeelMuchBetterText::
 	cont "ZERSCHNEIDER"
 	cont "lernen?"
 
-	para "Ich könnte es Dir"
-	line "beibringen, aber"
-	cont "mir ist so übel."
-
-	para "Ich hab's! Nimm"
-	line "einfach das hier!"
+	para "Mir ist zu übel,"
+	line "um es zu zeigen."
+	cont "Nimm lieber das!"
 
 	para "Damit bringst Du"
 	line "Deinen #MON"

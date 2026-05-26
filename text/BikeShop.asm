@@ -25,9 +25,8 @@ _BikeShopClerkOhThatsAVoucherText::
 	text "Oh, das ist ein..."
 
 	para "...RAD-COUPON!"
-
-	para "OK!"
-	line "Es gehört Dir!"
+	line "OK, es gehört"
+	cont "Dir!"
 	prompt
 
 _BikeShopExchangedVoucherText::

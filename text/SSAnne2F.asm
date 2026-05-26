@@ -18,16 +18,10 @@ _SSAnne2FRivalText::
 	line "würde Dich hier"
 	cont "treffen!"
 
-	para "<PLAYER>, hat man"
-	line "Dich tatsächlich"
-	cont "eingeladen?"
-
-	para "Wie kommst Du"
-	line "mit Deinem"
-	cont "#DEX voran?"
-
-	para "Ich habe bereits"
-	line "40 verschiedene"
+	para "Wie läuft Dein"
+	line "#DEX? Ich habe"
+	cont "bereits"
+	cont "40 verschiedene"
 	cont "#MON gefangen!"
 
 	para "Es gibt eine"
@@ -70,9 +64,7 @@ _SSAnne2FRivalCutMasterText::
 
 	para "Der ZERSCHNEIDER"
 	line "ist äußerst"
-	cont "nützlich!"
-
-	para "Du solltest den"
-	line "alten Mann mal"
+	cont "nützlich! Geh den"
+	cont "alten Mann mal"
 	cont "besuchen! Ciao!"
 	done

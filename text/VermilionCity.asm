@@ -50,10 +50,9 @@ _VermilionCitySailor1YouNeedATicketText::
 	text "<PLAYER> hat "
 	line "kein BOOTSTICKET!"
 
-	para "Tut mir leid!"
-
-	para "Du brauchst ein"
-	line "Ticket, um an"
+	para "Tut mir leid,"
+	line "Du brauchst ein"
+	cont "Ticket, um an"
 	cont "Bord gehen zu"
 	cont "können."
 	done
@@ -101,10 +100,8 @@ _VermilionCitySignText::
 	done
 
 _VermilionCityNoticeSignText::
-	text "ACHTUNG!"
-
-	para "ROUTE 12 wird"
-	line "von einem"
+	text "ACHTUNG! ROUTE 12"
+	line "wird von einem"
 	cont "schlafenden"
 	cont "#MON"
 	cont "blockiert."

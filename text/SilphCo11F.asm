@@ -6,17 +6,11 @@ _SilphCo11FSilphPresidentText::
 
 	para "Ich werde niemals"
 	line "vergessen, wie Du"
-	cont "uns trotz größter"
-	cont "Gefahren tapfer"
+	cont "uns trotz Gefahr"
 	cont "gerettet hast!"
 
 	para "Wie kann ich Dir"
-	line "bloß meinen Dank"
-	cont "aussprechen?"
-
-	para "Ich bin reich,"
-	line "ich könnte Dir"
-	cont "alles geben!"
+	line "bloß danken?"
 
 	para "Aber vielleicht"
 	line "ist das hier eher"
@@ -40,15 +34,12 @@ _SilphCo11FSilphPresidentMasterBallDescriptionText::
 	cont "Prototyp des"
 	cont "MEISTERBALLS!"
 
-	para "Du kannst mit ihm"
-	line "JEDES #MON"
-	cont "BEIM 1. VERSUCH"
-	cont "einfangen!"
+	para "Er fängt JEDES"
+	line "#MON beim"
+	cont "1. Versuch!"
 
-	para "Wäge jedoch"
-	line "sorgfältig ab,"
-	cont "wann Du ihn"
-	cont "einsetzt!"
+	para "Setze ihn also"
+	line "mit Bedacht ein!"
 	done
 
 _SilphCo11FSilphPresidentNoRoomText::
@@ -75,15 +66,10 @@ _SilphCo11FGiovanniText::
 	cont "Verhandlungen mit"
 	cont "dem PRÄSIDENTEN."
 
-	para "Halte Dich ein"
-	line "für allemal aus"
-	cont "den Geschäften"
-	cont "Erwachsener"
-	cont "heraus!"
-
-	para "Oder Du lernst"
-	line "eine Welt voller"
-	cont "Schmerzen kennen!"
+	para "Halte Dich aus"
+	line "den Geschäften"
+	cont "Erwachsener raus,"
+	cont "sonst tut es weh!"
 	done
 
 _SilphCo10FGiovanniILostAgainText::
@@ -102,15 +88,13 @@ _SilphCo11FGiovanniYouRuinedOurPlansText::
 	line "TEAM ROCKET wird"
 	cont "niemals aufgeben!"
 
-	para "<PLAYER>! Vergiß"
-	line "nicht, daß alle"
-	cont "#MON nur zum"
-	cont "Nutzen des TEAM"
-	cont "ROCKET da sind!"
+	para "<PLAYER>! Alle"
+	line "#MON dienen"
+	cont "TEAM ROCKET!"
 
-	para "Ich muß gehen,"
-	line "aber meine Zeit"
-	cont "wird kommen!"
+	para "Ich gehe, aber"
+	line "meine Zeit wird"
+	cont "kommen!"
 	done
 
 _SilphCo11FRocket1BattleText::

@@ -135,8 +135,8 @@ _SaffronCityTrainerTips1Text::
 	cont "Verletzungen."
 
 	para "Er ist teuer,"
-	line "dafür aber"
-	cont "sehr praktisch."
+	line "aber sehr"
+	cont "praktisch."
 	done
 
 _SaffronCityTrainerTips2Text::
@@ -147,9 +147,8 @@ _SaffronCityTrainerTips2Text::
 	cont "Fangquote."
 
 	para "Probiere ihn bei"
-	line "#MON aus, die"
-	cont "schwer zu fangen"
-	cont "sind!"
+	line "schwer fangbaren"
+	cont "#MON aus!"
 	done
 
 _SaffronCitySilphCoSignText::

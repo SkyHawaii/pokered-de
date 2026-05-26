@@ -20,10 +20,9 @@ _SafariZoneNorthTrainerTips2Text::
 	para "#MON"
 	line "verstecken sich"
 	cont "in hohem Gras!"
-
-	para "Laufe durch das"
-	line "hohe Gras und"
-	cont "scheuche sie auf!"
+	cont "Laufe hindurch"
+	cont "und scheuche sie"
+	cont "auf!"
 	done
 
 _SafariZoneNorthTrainerTips3Text::

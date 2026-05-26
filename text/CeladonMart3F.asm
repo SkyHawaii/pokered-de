@@ -54,15 +54,12 @@ _CeladonMart3FGameBoyKid2Text::
 _CeladonMart3FGameBoyKid3Text::
 	text "Komm, GEOROK!"
 
-	para "Ich bin"
+	para "Ich bin ein"
 	line "GEOROK-Sammler!"
-
-	para "Nanu?"
-
-	para "GEOROK hat sich"
-	line "zu einem anderen"
-	cont "#MON"
-	cont "entwickelt!"
+	cont "Nanu? GEOROK"
+	cont "hat sich zu"
+	cont "einem anderen"
+	cont "#MON entwickelt!"
 	done
 
 _CeladonMart3FLittleBoyText::

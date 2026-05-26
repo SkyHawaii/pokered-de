@@ -16,13 +16,9 @@ _SilphCo7FSilphWorkerM1LaprasDescriptionText::
 
 	para "Es hat bisher bei"
 	line "uns im Labor"
-	cont "gelebt. Aber bei"
-	cont "Dir ist es besser"
+	cont "gelebt. Bei Dir"
+	cont "ist es besser"
 	cont "aufgehoben!"
-
-	para "Du wirst LAPRAS"
-	line "sicher ein guter"
-	cont "Trainer sein!"
 
 	para "Es ist ein guter"
 	line "Schwimmer und"
@@ -179,11 +175,10 @@ _SilphCo7FRivalWaitedHereText::
 	cont "Dir ganz schön"
 	cont "zugesetzt!"
 
-	para "Ich hab Dich in"
+	para "Ich sah Dich in"
 	line "SAFFRONIA CITY"
-	cont "gesehen und mich"
-	cont "gefragt, ob Du"
-	cont "seitdem besser "
+	cont "und wollte sehen,"
+	cont "ob Du stärker"
 	cont "geworden bist!"
 	done
 
@@ -208,11 +203,9 @@ _SilphCo7FRivalVictoryText::
 _SilphCo7FRivalGoodLuckToYouText::
 	text "Also, <PLAYER>!"
 
-	para "Ich ziehe dann"
-	line "mal weiter!"
-
-	para "Wenn ich in den"
-	line "#DEX sehe,"
+	para "Ich ziehe weiter!"
+	line "Wenn ich in den"
+	cont "#DEX sehe,"
 	cont "erkenne ich, wie"
 	cont "stark die #MON"
 	cont "sind und wie sie"
@@ -221,12 +214,10 @@ _SilphCo7FRivalGoodLuckToYouText::
 	para "Ich werde zur"
 	line "PKMN-Liga gehen."
 
-	para "Dann werde ich"
-	line "die TOP VIER"
-	cont "ausstechen!"
-
-	para "Bald bin ich der"
-	line "mächtigste"
+	para "Dann steche ich"
+	line "die TOP VIER aus"
+	cont "und werde der"
+	cont "mächtigste"
 	cont "Trainer der Welt!"
 
 	para "Viel Glück,"

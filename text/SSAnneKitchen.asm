@@ -49,7 +49,7 @@ _SSAnneKitchenCook7MainCourseIsText::
 	text "Ich bin der Chef"
 	line "de cuisine! "
 
-	para "Der Hauptgang ist"
+	para "Der Hauptgang:"
 	prompt
 
 SSAnneKitchenCook7SalmonDuSaladText::

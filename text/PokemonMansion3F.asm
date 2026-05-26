@@ -36,7 +36,6 @@ _PokemonMansion3FDiaryText::
 
 	para "MEW hat ein"
 	line "Junges geboren!"
-
-	para "Wir haben es"
-	line "MEWTU genannt."
+	cont "Wir nannten es"
+	cont "MEWTU."
 	done

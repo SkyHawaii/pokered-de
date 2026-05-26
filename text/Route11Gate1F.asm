@@ -7,12 +7,7 @@ _Route11Gate1FGuardText::
 	cont "geben!"
 
 	para "In LAVANDIA"
-	line "lebt ein Mann,"
-	cont "der Spitznamen"
-	cont "von #MON"
-	cont "bewertet."
-
-	para "Er nimmt auch"
-	line "Namensänderungen"
-	cont "vor!"
+	line "bewertet ein Mann"
+	cont "#MON-Spitznamen"
+	cont "und ändert sie!"
 	done

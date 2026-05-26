@@ -20,7 +20,6 @@ _VermilionPidgeyHouseLetterText::
 	cont "SAFFRONIA CITY"
 	cont "Unruhe!"
 
-	para "In ORANIA CITY"
-	line "scheint es sicher"
-	cont "zu sein."
+	para "ORANIA CITY wirkt"
+	line "dagegen sicher."
 	done

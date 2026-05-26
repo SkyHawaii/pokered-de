@@ -8,9 +8,8 @@ _CopycatsHouse2FCopycatDoYouLikePokemonText::
 
 	para "<PLAYER>: Wie?"
 	line "Du bist komisch!"
-
-	para "NACHAHMERIN: Hmm?"
-	line "Ich soll die"
+	cont "NACHAHMERIN: Hmm?"
+	cont "Ich soll die"
 	cont "Nachahmerei"
 	cont "aufgeben?"
 
@@ -24,9 +23,7 @@ _CopycatsHouse2FCopycatTM31PreReceiveText::
 
 	para "Die ist für mich?"
 	line "Vielen Dank!"
-
-	para "Ich gebe Dir das"
-	line "hier dafür!"
+	cont "Hier, dafür!"
 	prompt
 
 _CopycatsHouse2FCopycatReceivedTM31Text::
@@ -52,14 +49,10 @@ _CopycatsHouse2FCopycatTM31Explanation2Text::
 	line "Vielen Dank für"
 	cont "die TM31!"
 
-	para "<PLAYER>:"
-	line "Sag mal..."
-
-	para "<PLAYER>:"
+	para "<PLAYER>: Sag..."
 	line "...macht es Dir"
-	cont "wirklich so"
-	cont "viel Spaß, mich"
-	cont "nachzuahmen?"
+	cont "wirklich Spaß,"
+	cont "mich nachzuahmen?"
 
 	para "NACHAHMERIN:"
 	line "Darauf kannst Du"
@@ -97,11 +90,9 @@ _CopycatsHouse2FSNESText::
 _CopycatsHouse2FPCMySecretsText::
 	text "..."
 
-	para "Meine"
-	line "Geheimnisse!"
-
-	para "Zeitvertreib:"
-	line "Mienenspiel"
+	para "Meine Geheimnisse:"
+	line "Zeitvertreib:"
+	cont "Mienenspiel"
 
 	para "Hobby:"
 	line "Puppen sammeln"

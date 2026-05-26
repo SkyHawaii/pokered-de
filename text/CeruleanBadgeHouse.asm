@@ -4,12 +4,10 @@ _CeruleanBadgeHouseMiddleAgedManText::
 	cont "#MON-ORDEN."
 
 	para "Wie ich sehe,"
-	line "bist Du bereits"
-	cont "Träger eines"
-	cont "ORDENS."
-
-	para "Die ORDEN sind"
-	line "geheimnisumwoben!"
+	line "trägst Du bereits"
+	cont "einen ORDEN."
+	cont "Sie sind voller"
+	cont "Geheimnisse!"
 	prompt
 
 _CeruleanBadgeHouseMiddleAgedManWhichBadgeText::
@@ -43,14 +41,11 @@ _CeruleanBadgeHouseCascadeBadgeText::
 	line "Level 30 folgen"
 	cont "Deinen Befehlen!"
 
-	para "#MON höherer"
-	line "Level gehorchen"
-	cont "Dir jedoch nicht!"
-
-	para "Ferner kannst Du"
-	line "den ZERSCHNEIDER"
-	cont "außerhalb von"
-	cont "Kämpfen nutzen!"
+	para "Höhere Level"
+	line "gehorchen nicht,"
+	cont "doch ZERSCHNEIDER"
+	cont "geht außerhalb"
+	cont "von Kämpfen!"
 	prompt
 
 _CeruleanBadgeHouseThunderBadgeText::
@@ -70,14 +65,11 @@ _CeruleanBadgeHouseRainbowBadgeText::
 	line "Level 50 folgen"
 	cont "Deinen Befehlen."
 
-	para "#MON höherer"
-	line "Level gehorchen"
-	cont "Dir jedoch nicht!"
-
-	para "Zusätzlich kannst"
-	line "Du außerhalb von"
-	cont "Kämpfen STÄRKE"
-	cont "einsetzen."
+	para "Höhere Level"
+	line "gehorchen nicht,"
+	cont "doch STÄRKE geht"
+	cont "außerhalb von"
+	cont "Kämpfen."
 	prompt
 
 _CeruleanBadgeHouseSoulBadgeText::

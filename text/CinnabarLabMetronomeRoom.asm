@@ -43,8 +43,6 @@ _CinnabarLabMetronomeRoomPCText::
 	text "Eine E-Mail ist"
 	line "angekommen!"
 
-	para "..."
-
 	para "ARKTOS, ZAPDOS"
 	line "und LAVADOS sind"
 	cont "die 3 legendären"
@@ -61,8 +59,6 @@ _CinnabarLabMetronomeRoomPCText::
 
 	para "Von: #MON-"
 	line "FORSCHUNGSTEAM"
-
-	para "..."
 	done
 
 _CinnabarLabMetronomeRoomAmberPipeText::

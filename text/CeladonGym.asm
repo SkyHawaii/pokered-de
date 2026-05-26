@@ -19,12 +19,10 @@ _CeladonGymErikaPreBattleText::
 	cont "ich PFLANZEN-"
 	cont "#MON."
 
-	para "Du möchtest gegen"
+	para "Du willst gegen"
 	line "mich antreten?"
-	cont "Also gut!"
-
-	para "Ich werde ohnehin"
-	line "nicht verlieren!"
+	cont "Also gut! Ich"
+	cont "verliere nicht!"
 	done
 
 _CeladonGymErikaReceivedRainbowBadgeText::
@@ -33,10 +31,8 @@ _CeladonGymErikaReceivedRainbowBadgeText::
 	cont "eingestehen!"
 
 	para "Deine Stärke ist"
-	line "beachtlich!"
-
-	para "Ich übergebe Dir"
-	line "den FARBORDEN!"
+	line "beachtlich! Nimm"
+	cont "den FARBORDEN!"
 	prompt
 
 _CeladonGymErikaPostBattleAdviceText::
@@ -60,7 +56,7 @@ _CeladonGymRainbowBadgeInfoText::
 	line "Deine #MON nun"
 	cont "STÄRKE außerhalb"
 	cont "von Kämpfen"
-	cont "anwenden."
+	cont "nutzen."
 
 	para "Nimm bitte noch"
 	line "dieses Geschenk:"
@@ -79,11 +75,10 @@ _TM21ExplanationText::
 	para "TM21 ist"
 	line "MEGASAUGER."
 
-	para "Dein #MON"
-	line "erhält die Hälfte"
-	cont "der KP, die diese"
-	cont "Attacke dem"
-	cont "Gegner abzieht!"
+	para "Dein #MON erhält"
+	line "die Hälfte der"
+	cont "KP zurück, die es"
+	cont "dem Gegner nimmt!"
 	done
 
 _CeladonGymTM21NoRoomText::

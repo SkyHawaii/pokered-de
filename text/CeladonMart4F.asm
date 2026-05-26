@@ -23,8 +23,6 @@ _CeladonMart4FCurrentFloorSignText::
 
 	para "S3: GESCHENK-"
 	line "ARTIKEL"
-
-	para "SONDERANGEBOTE!"
-	line "Sonderpreise für"
+	cont "SONDERANGEBOTE:"
 	cont "ELEMENT-STEINE!"
 	done

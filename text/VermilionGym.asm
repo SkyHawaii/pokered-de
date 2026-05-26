@@ -4,21 +4,15 @@ _VermilionGymLTSurgePreBattleText::
 	cont "verloren?"
 
 	para "Im Kampf hast"
-	line "Du keine große"
-	cont "Chance, so viel"
-	cont "ist sicher!"
+	line "Du keine Chance,"
+	cont "so viel ist"
+	cont "sicher!"
 
 	para "Laß mich Dir"
-	line "etwas erzählen: "
-	cont "Während der"
-	cont "#MON-FELDZÜGE"
-	cont "haben mich meine"
+	line "was erzählen:"
 	cont "ELEKTRO-#MON"
-	cont "gerettet!"
-
-	para "Sie haben meine"
-	line "Gegner mit Strom"
-	cont "paralysiert!"
+	cont "retteten mich in"
+	cont "#MON-FELDZÜGEN!"
 
 	para "Das gleiche steht"
 	line "Dir nun bevor!"

@@ -8,11 +8,9 @@ _CeladonMartRoofLittleGirlYayFreshWaterText::
 	text "Ja!"
 
 	para "TAFELWASSER!"
-
-	para "Vielen Dank!"
-
-	para "Nimm bitte dieses"
-	line "Geschenk!@"
+	line "Vielen Dank!"
+	cont "Nimm bitte dieses"
+	cont "Geschenk!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM13Text::
@@ -30,20 +28,18 @@ _CeladonMartRoofLittleGirlTM13ExplanationText::
 	text " ist"
 	line "EISSTRAHL!"
 
-	para "Damit kann man"
+	para "Damit friert man"
 	line "manche Gegner"
-	cont "einfrieren!@"
+	cont "ein!@"
 	text_end
 
 _CeladonMartRoofLittleGirlYaySodaPopText::
 	text "Cool!"
 
 	para "SPRUDEL!"
-
-	para "Vielen Dank!"
-
-	para "Nimm bitte dieses"
-	line "Geschenk!@"
+	line "Vielen Dank!"
+	cont "Nimm bitte dieses"
+	cont "Geschenk!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM48Text::
@@ -61,20 +57,18 @@ _CeladonMartRoofLittleGirlTM48ExplanationText::
 	text " ist"
 	line "STEINHAGEL!"
 
-	para "Damit kann man"
+	para "Damit jagt man"
 	line "manchen Gegnern"
-	cont "Angst einjagen!@"
+	cont "Angst ein!@"
 	text_end
 
 _CeladonMartRoofLittleGirlYayLemonadeText::
 	text "Cool!"
 
 	para "LIMONADE!"
-
-	para "Vielen Dank!"
-
-	para "Nimm bitte dieses"
-	line "Geschenk!@"
+	line "Vielen Dank!"
+	cont "Nimm bitte dieses"
+	cont "Geschenk!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM49Text::

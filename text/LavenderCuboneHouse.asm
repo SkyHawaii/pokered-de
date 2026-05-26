@@ -10,9 +10,8 @@ _LavenderCuboneHouseBrunetteGirlPoorCubonesMotherText::
 
 	para "Die arme Mutter"
 	line "des TRAGOSSO!"
-
-	para "Sie konnte dem"
-	line "TEAM ROCKET"
+	cont "Sie konnte dem"
+	cont "TEAM ROCKET"
 	cont "nicht entkommen!"
 	done
 

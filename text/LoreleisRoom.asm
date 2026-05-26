@@ -11,10 +11,6 @@ _LoreleisRoomLoreleiBeforeBattleText::
 	cont "wenn es um"
 	cont "EIS-#MON geht!"
 
-	para "Die Kraft von"
-	line "Eis-Attacken ist"
-	cont "unglaublich!"
-
 	para "Du wirst um Gnade"
 	line "winseln, wenn ich"
 	cont "Deine  #MON"

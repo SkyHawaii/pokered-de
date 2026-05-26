@@ -2,10 +2,8 @@ _CinnabarLabFossilRoomScientist1Text::
 	text "Hallo!"
 
 	para "Ich leite hier"
-	line "die Forschungen!"
-
-	para "Wir erforschen"
-	line "Fossilien von"
+	line "die Forschung an"
+	cont "Fossilien von"
 	cont "URZEIT-#MON!"
 
 	para "Hast Du ein"
@@ -28,14 +26,12 @@ _CinnabarLabFossilRoomScientist1GoForAWalkText::
 _CinnabarLabFossilRoomScientist1FossilIsBackToLifeText::
 	text "Wo warst Du?"
 
-	para "Wir haben"
-	line "Dein Fossil"
-	cont "wiederbelebt!"
-
-	para "Ein @"
+	para "Wir haben Dein"
+	line "Fossil belebt:"
+	cont "Ein @"
 	text_ram wStringBuffer
 	text ","
-	line "ganz wie ich es"
+	cont "ganz wie ich es"
 	cont "vermutet habe!"
 	prompt
 
@@ -53,10 +49,9 @@ _CinnabarLabFossilRoomScientist1SeesFossilText::
 	cont "ausgestorbenen"
 	cont "#MON!"
 
-	para "Dank modernster"
+	para "Mit moderner"
 	line "Technik können"
-	cont "wir #MON"
-	cont "aus Fossilien"
+	cont "wir solche #MON"
 	cont "wiederbeleben!"
 	done
 
